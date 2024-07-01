@@ -3,15 +3,16 @@
 
 pragma solidity ^0.8.24;
 
-import "../../interfaces/IVestingEscrow.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "../../interfaces/IVestingEscrow.sol";
+import "../Utils/SCPermissionedAccess.sol";
 import "../Utils/ABDKMath64x64.sol";
 import "../../interfaces/IPermissionsManager.sol";
 
 /// @title An exponential decay-rate emissions vesting contract.
-/// @author Chance Santana-Wees
+/// @author Chance Santana-Wees (Coel.eth/Coelacanth)
 /// @dev Solidity implementation of https://github.com/LlamaPay/yearn-vesting-escrow contract. Modified to emit at an exponentially decaying rate with no finite vesting period.
-contract ExponentialVestingEscrow is IVestingEscrow {
+contract ExponentialVestingEscrow is IVestingEscrow, SCPermissionedAccess {
     ///@notice Emitted when the contract is funded with emissions tokens
     event Fund(address recipient, uint256 amount);
     
@@ -20,9 +21,6 @@ contract ExponentialVestingEscrow is IVestingEscrow {
 
     ///@notice Emitted when the recipient address is changed
     event RecipientChanged(address recipient);
-
-    ///@notice The permissions registry
-    IPermissionsManager immutable private _permissions;
 
     ///@notice The address of the beneficiary of the token emissions
     address public recipient;
@@ -59,18 +57,8 @@ contract ExponentialVestingEscrow is IVestingEscrow {
         _reentrancy_locked = false; 
     }
 
-    ///@notice A function modifier that restricts execution to addresses with the Global Admin permission set.
-    modifier isGlobalAdmin() {
-        require(_permissions.hasRole(IPermissionsManager.Role.GLOBAL_ADMIN, msg.sender));
-        _;
-    }
-
     ///@param permissions_ The address of the permissions registry. Must conform to IPermissionsManager.
-    constructor(
-        address permissions_
-    ) {
-        _permissions = IPermissionsManager(permissions_);
-    }
+    constructor(address permissions_) SCPermissionedAccess(permissions_){ }
     
     /**
     * @notice Initialize the emissions contract.

@@ -4,6 +4,7 @@ pragma solidity ^0.8.24;
 
 
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
+import "../Utils/SCPermissionedAccess.sol";
 import "../../interfaces/IPermissionsManager.sol";
 import "../../interfaces/ISCMetagameRegistry.sol";
 import "../../interfaces/ISCMetagameDataSource.sol";
@@ -11,24 +12,16 @@ import "../../interfaces/ISCAccessPass.sol";
 
 /// @title Metagame data view for determining metagame multipliers and membership, by address
 /// @author Chance Santana-Wees (Coelacanth/Coel.eth)
-contract SCMetagameGenericDataView is ISCMetagameDataSource {
+contract SCMetagameGenericDataView is ISCMetagameDataSource, SCPermissionedAccess {
     /// @dev The key of the house id metadata tag. Used to retrieve house membership data of addresses from the metadata registry. 
     string constant HOMETOWN_ID = "hometown";
 
-    IPermissionsManager public immutable permissions;
     ISCMetagameRegistry public metadata_registry;
 
     /// @notice A mapping of ISCMetagameDataSource by location id.
     mapping(string => ISCMetagameDataSource) public location_views;
 
-    /// @notice Function modifier which requires the sender to possess the systems admin permission as recorded in "permissions"
-    modifier isSystemsAdmin() {
-        require(permissions.hasRole(IPermissionsManager.Role.SYSTEMS_ADMIN, msg.sender));
-        _;
-    }
-
-    constructor(address permissions_, address metadata_registry_) {
-        permissions = IPermissionsManager(permissions_);
+    constructor(address permissions_, address metadata_registry_) SCPermissionedAccess(permissions_) {
         metadata_registry = ISCMetagameRegistry(metadata_registry_);
     }
 

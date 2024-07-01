@@ -4,6 +4,7 @@ pragma solidity ^0.8.24;
 
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "../Utils/SCPermissionedAccess.sol";
 import "../../interfaces/IPermissionsManager.sol";
 import "../../interfaces/ISCMetagameRegistry.sol";
 import "../../interfaces/ISCMetagameDataSource.sol";
@@ -13,13 +14,10 @@ import "./SCMetagameLocationRewards.sol";
 /// @title Manager for "Location Cup" token metagame
 /// @author Chance Santana-Wees (Coelacanth/Coel.eth)
 /// @notice Allows system to add locations, report scores for locations, assign awards tier percentages and distribute emissions tokens to location contribution contracts.
-contract SCMetagameLocations is ISCMetagameDataSource {
+contract SCMetagameLocations is ISCMetagameDataSource, SCPermissionedAccess {
     /// @notice The metadata registry.
     /// @dev Stores location membership information for users.
     ISCMetagameRegistry public immutable metadata;
-
-    /// @notice The permissions registry.
-    IPermissionsManager public immutable permissions;
 
     /// @notice The emissions token.
     IERC20 public immutable token;
@@ -53,18 +51,6 @@ contract SCMetagameLocations is ISCMetagameDataSource {
     /// @notice The numeric id (start timestamp) of the next epoch 
     uint256 public next_epoch = 0;
 
-    /// @notice Function modifier which requires the sender to possess the systems admin permission as recorded in "permissions"
-    modifier isSystemsAdmin() {
-        require(permissions.hasRole(IPermissionsManager.Role.SYSTEMS_ADMIN, msg.sender));
-        _;
-    }
-
-    /// @notice Function modifier which requires the sender to possess the global admin permission as recorded in "permissions"
-    modifier isGlobalAdmin() {
-        require(permissions.hasRole(IPermissionsManager.Role.GLOBAL_ADMIN, msg.sender));
-        _;
-    }
-
     event LocationAdded(string location);
 
     /// @param permissions_ Address of the protocol permissions registry. Must conform to IPermissionsManager.
@@ -79,8 +65,7 @@ contract SCMetagameLocations is ISCMetagameDataSource {
         address treasury_,
         address access_pass_,
         address data_view_
-    ) {
-        permissions = IPermissionsManager(permissions_);
+    ) SCPermissionedAccess(permissions_) {
         token = IERC20(token_);
         metadata = ISCMetagameRegistry(metadata_);
         treasury = treasury_;
@@ -115,8 +100,6 @@ contract SCMetagameLocations is ISCMetagameDataSource {
             address(access_pass)
         );
 
-        location_rewards[location_name_].setRewardsDistribution(address(this));
-
         locations.push(location_name_);
         
         emit LocationAdded(location_name_);
@@ -131,8 +114,12 @@ contract SCMetagameLocations is ISCMetagameDataSource {
 
     /// @notice Distribute emissions tokens to each locations contributions contract and initializes the next epoch.
     /// @dev Only callable by address with System Admin permissions. Must be called after the epoch has elapsed. 
-    function distributeRewards(string[] memory locations_, uint256[] memory location_reward_shares_) external isSystemsAdmin {
-        require(next_epoch <= block.timestamp, "NOT YET NEXT EPOCH");
+    function distributeRewards(uint256 epoch_, string[] memory locations_, uint256[] memory location_reward_shares_) external isSystemsAdmin {
+        require(epoch_ == current_epoch, "INCORRECT EPOCH");
+        
+        uint256 _next_epoch = next_epoch;
+        require(_next_epoch <= block.timestamp, "NOT YET NEXT EPOCH");
+
         uint256 _length = locations_.length;
         require(_length == location_reward_shares_.length, "INPUT MISMATCH");
         
@@ -147,21 +134,24 @@ contract SCMetagameLocations is ISCMetagameDataSource {
         require(_success);
         
         uint256 _duration = EPOCH; //If somehow the epoch was not initialized for an entire epoch span, default to 1 EPOCH in the future
-        if((next_epoch + _duration) > block.timestamp) {
-            _duration = (next_epoch + _duration) - block.timestamp;
+        if((_next_epoch + _duration) > block.timestamp) {
+            _duration = (_next_epoch + _duration) - block.timestamp;
         }
         
-        for(uint256 i = 0; i < locations_.length; i++) {
+        uint256 _num_locations = locations_.length;
+        for(uint256 i = 0; i < _num_locations; i++) {
             string memory _location = locations_[i];
-            require(address(location_rewards[_location]) != address(0), "HOUSE DOESNT EXIST");
+            SCMetagameLocationRewards _location_staker = location_rewards[_location];
+            require(address(_location_staker) != address(0), "LOCATION DOESNT EXIST");
+            require(_location_staker.periodFinish() < block.timestamp, "LOCATION STREAM NOT FINISHED");
             uint256 _share = location_reward_shares_[i];
-            location_rewards[_location].setRewardsDuration(_duration);
-            bool success = token.transfer(address(location_rewards[_location]), _share);
+            _location_staker.setRewardsDuration(_duration);
+            bool success = token.transfer(address(_location_staker), _share);
             require(success, "TRANSFER FAILED");
-            location_rewards[_location].notifyRewardAmount(_share);
+            _location_staker.notifyRewardAmount(_share);
         }
 
-        current_epoch = next_epoch;
+        current_epoch = _next_epoch;
         next_epoch = block.timestamp + _duration;
     }
 

@@ -5,6 +5,7 @@ pragma solidity ^0.8.24;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "../Utils/SCPermissionedAccess.sol";
 import "./SCGenericRenderer.sol";
 import "../../interfaces/IPermissionsManager.sol";
 import "../../interfaces/ISuperChampsToken.sol";
@@ -14,12 +15,9 @@ import "../../interfaces/IERC721MetadataRenderer.sol";
 /// @author Chance Santana-Wees (Coelacanth/Coel.eth)
 /// @dev Token transfers are restricted to addresses that have the Transer Admin permission until the CHAMP token is unlocked.
 /// @notice This is a standard ERC721 token contract that restricts token transfers before the protocol token is unlocked. Trades still possible via Shop/Marketplace system, but limited to sales denominated in CHAMP.
-contract SCTempLockedNFT is ERC721 {
+contract SCTempLockedNFT is ERC721, SCPermissionedAccess {
     /// @notice The metadata renderer contract.
     IERC721MetadataRenderer private _renderer;
-
-    ///@notice The protocol permissions registry
-    IPermissionsManager immutable public permissions;
     
     ///@notice The protocol token;
     ISuperChampsToken public immutable champ_token;
@@ -36,20 +34,6 @@ contract SCTempLockedNFT is ERC721 {
         _;
     }
 
-    ///@notice A function modifier that restricts to Global Admins
-    modifier isGlobalAdmin() {
-        require(permissions.hasRole(IPermissionsManager.Role.GLOBAL_ADMIN, _msgSender()),
-                "ADMIN ONLY");
-        _;
-    }
-
-    ///@notice A function modifier that restricts to System Admins
-    modifier isSystemsAdmin() {
-        require(permissions.hasRole(IPermissionsManager.Role.SYSTEMS_ADMIN, _msgSender()),
-                "ADMIN ONLY");
-        _;
-    }
-
     ///@param name_ String representing the token's name.
     ///@param symbol_ String representing the token's symbol.
     ///@param champ_token_ The protocol token.
@@ -59,7 +43,7 @@ contract SCTempLockedNFT is ERC721 {
         string memory uri_,
         ISuperChampsToken champ_token_
     ) 
-        ERC721(name_, symbol_)
+        ERC721(name_, symbol_) SCPermissionedAccess(address(champ_token_.permissions()))
     {
         champ_token = champ_token_;
         permissions = champ_token_.permissions();

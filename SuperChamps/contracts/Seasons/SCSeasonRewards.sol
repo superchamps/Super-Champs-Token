@@ -4,6 +4,7 @@
 pragma solidity ^0.8.24;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "../Utils/SCPermissionedAccess.sol";
 import "../../interfaces/IPermissionsManager.sol";
 import "../../interfaces/ISCSeasonRewards.sol";
 import "../../interfaces/ISCAccessPass.sol";
@@ -12,11 +13,7 @@ import "../../interfaces/ISCAccessPass.sol";
 /// @author Chance Santana-Wees (Coelacanth/Coel.eth)
 /// @dev Season rewards pulled from a treasury contract that must have a token allowance set for this contract.
 /// @notice Allows System Admins to set up and report scores for Seasons.
-contract SCSeasonRewards is ISCSeasonRewards{
-
-    ///@notice The protocol permissions registry
-    IPermissionsManager immutable permissions;
-
+contract SCSeasonRewards is ISCSeasonRewards, SCPermissionedAccess{
     ///@notice The address of the rewards token. (The CHAMP token)
     IERC20 immutable token;
 
@@ -43,18 +40,6 @@ contract SCSeasonRewards is ISCSeasonRewards{
     ///@dev This acts as the nonce for the signatures. Signatures with timestamps earlier than the value set are not valid.
     mapping(address => uint256) public player_last_signature_timestamp;
 
-    ///@notice A modifier that restricts function calls to addresses with the Systems admin permission set.
-    modifier isQuestSystem() {
-        require(permissions.hasRole(IPermissionsManager.Role.SYSTEMS_ADMIN, msg.sender));
-        _;
-    }
-
-    ///@notice A modifier that restricts function calls to addresses with the Global admin permission set.
-    modifier isGlobalAdmin() {
-        require(permissions.hasRole(IPermissionsManager.Role.GLOBAL_ADMIN, msg.sender));
-        _;
-    }
-
     event TreasurySet(address treasury);
 
     ///@param permissions_ The address of the protocol permissions registry. Must conform to IPermissionsManager.
@@ -66,8 +51,8 @@ contract SCSeasonRewards is ISCSeasonRewards{
         address token_, 
         address treasury_,
         address access_pass_) 
+        SCPermissionedAccess(permissions_)
     {
-        permissions = IPermissionsManager(permissions_);
         token = IERC20(token_);
         treasury = treasury_;
         access_pass = ISCAccessPass(access_pass_);
@@ -87,7 +72,7 @@ contract SCSeasonRewards is ISCSeasonRewards{
     ///@return season_ ISCSeasonRewards.Season The Season struct that was initialized.
     function startSeason(
         uint256 start_time_
-    ) external isQuestSystem returns(ISCSeasonRewards.Season memory season_)
+    ) external isSystemsAdmin returns(ISCSeasonRewards.Season memory season_)
     {
         require(start_time_ > 0, "CANNOT START AT 0");
         season_.start_time = start_time_;
@@ -160,7 +145,7 @@ contract SCSeasonRewards is ISCSeasonRewards{
     ///@param id_ The id of the season to end.
     function endSeason(
         uint256 id_
-    ) external isQuestSystem
+    ) external isSystemsAdmin
     {
         Season storage _season = seasons[id_];
         require(_season.start_time > 0, "SEASON NOT FOUND");
@@ -173,7 +158,7 @@ contract SCSeasonRewards is ISCSeasonRewards{
     ///@param id_ The id of the season to end.
     function revokeUnclaimedReward(
         uint256 id_
-    ) external isQuestSystem
+    ) external isSystemsAdmin
     {
         Season storage _season = seasons[id_];
         uint256 _remaining_reward_amount = _season.remaining_reward_amount;
@@ -195,13 +180,14 @@ contract SCSeasonRewards is ISCSeasonRewards{
         uint256 id_,
         uint256 reward_amount_,
         uint256 claim_duration_
-    ) external isQuestSystem
+    ) external isSystemsAdmin
     {
         Season storage _season = seasons[id_];
         require(_season.start_time > 0, "SEASON NOT FOUND");
         require(isSeasonEnded(_season, block.timestamp), "SEASON_NOT_ENDED");
         require(!isSeasonFinalized(_season), "SEASON_FINALIZED");
         require(reward_amount_ == _season.reward_amount, "REWARD AMOUNT DOESN'T MATCH");
+        require(claim_duration_ >= 7 days && claim_duration_ < 1000 days, "CLAIM DURATION OUT OF BOUNDS");
 
         bool transfer_success = token.transferFrom(treasury, address(this), reward_amount_);
         require(transfer_success, "FAILED TRANSFER");
@@ -219,7 +205,7 @@ contract SCSeasonRewards is ISCSeasonRewards{
         uint256 season_id_,
         address[] calldata players_,
         uint256[] calldata rewards_
-    ) external isQuestSystem
+    ) external isSystemsAdmin
     {
         require(players_.length == rewards_.length, "ARRAYS  MISMATCH");
 
@@ -256,11 +242,11 @@ contract SCSeasonRewards is ISCSeasonRewards{
         uint256 _reward = season_rewards[season_id_][msg.sender];
         require(_reward > 0, "MUST HAVE A NON ZERO REWARD");
 
-        bool transfer_success = token.transfer(msg.sender, _reward);
-        require(transfer_success, "FAILED TRANSFER");
-
         _season.remaining_reward_amount -= _reward;
         claimed_rewards[season_id_][msg.sender] = _reward;
+
+        bool transfer_success = token.transfer(msg.sender, _reward);
+        require(transfer_success, "FAILED TRANSFER");
     }
 
     ///@notice get reward tokens claimable by a player in the specified season.

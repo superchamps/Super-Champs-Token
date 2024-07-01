@@ -103,7 +103,7 @@ contract StakingRewards is IStakingRewards, RewardsDistributionRecipient, Reentr
         }
     }
 
-    function exit() external {
+    function exit() virtual external {
         withdraw(_balances[msg.sender]);
         getReward();
     }

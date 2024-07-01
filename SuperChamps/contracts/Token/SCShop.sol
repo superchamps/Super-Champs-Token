@@ -6,37 +6,22 @@ pragma solidity ^0.8.24;
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "../../interfaces/IPermissionsManager.sol";
+import "../Utils/SCPermissionedAccess.sol";
 
 /// @title Shop Sales Manager
 /// @author Chance Santana-Wees (Coelacanth/Coel.eth)
 /// @notice Used by the Super Champs Shop system to transfer tokens from user accounts. 
 /// @dev Allows the transfer of tokens from user accounts before token unlock.
-contract SCShop {
-    ///@notice The permissions manager
-    IPermissionsManager immutable permissions;
-    
+contract SCShop is SCPermissionedAccess {
     ///@notice The token used by the shop. (The CHAMP token.)
     IERC20 immutable token;
 
     ///@notice Emitted when a call to saleTransaction(...) completes.
     event saleReceipt(address buyer, uint256 amount, string subsystem, string metadata);
 
-    ///@notice A function modifier that restricts to Global Admins
-    modifier isGlobalAdmin() {
-        require(permissions.hasRole(IPermissionsManager.Role.GLOBAL_ADMIN, msg.sender));
-        _;
-    }
-
-    ///@notice A function modifier that restricts to System Admins
-    modifier isSalesAdmin() {
-        require(permissions.hasRole(IPermissionsManager.Role.SYSTEMS_ADMIN, msg.sender));
-        _;
-    }
-
     ///@param permissions_ Address of the protocol permissions registry. Must conform to IPermissionsManager.
     ///@param token_ Address of the sales token. Must conform to IERC20.
-    constructor(address permissions_, address token_) {
-        permissions = IPermissionsManager(permissions_);
+    constructor(address permissions_, address token_) SCPermissionedAccess(permissions_) {
         token = IERC20(token_);
     }
 
@@ -53,7 +38,7 @@ contract SCShop {
         uint256 amount_, 
         string memory subsystem_, 
         string calldata metadata_
-    ) public isSalesAdmin
+    ) public isSystemsAdmin
     {
         bool success = token.transferFrom(buyer_, recipient_, amount_);
         require(success);
@@ -77,7 +62,7 @@ contract SCShop {
         uint256 token_id_,
         string calldata sale_metadata_,
         bytes calldata transfer_metadata_
-    ) public isSalesAdmin
+    ) public isSystemsAdmin
     {
         saleTransaction(buyer_, seller_, price_, "NFT", sale_metadata_);
         nft_.safeTransferFrom(seller_, buyer_, token_id_, transfer_metadata_);

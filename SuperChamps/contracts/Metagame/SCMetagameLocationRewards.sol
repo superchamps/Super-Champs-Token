@@ -21,6 +21,12 @@ contract SCMetagameLocationRewards is StakingRewards {
     /// @notice The access pass SBT
     ISCAccessPass public access_pass;
 
+    /// @notice The true staked supply
+    uint256 public staked_supply;
+
+    /// @notice The true staked supply
+    mapping(address => uint256) public user_stakes;
+
     /// @dev The recorded multipliers (if any) of users who have deposited tokens.
     mapping(address => uint256) internal _multiplier_basis_points;
     
@@ -40,29 +46,10 @@ contract SCMetagameLocationRewards is StakingRewards {
         rewardsDuration = 0;
     }
 
-    /// @notice Identical to base contract except that only specific users may deposit tokens. See {StakingRewards-stake}.
-    function stake(uint256 amount_) external override nonReentrant notPaused updateReward(msg.sender) {
-        require(metagame_data.getMembership(msg.sender, location_id), "MUST BE IN HOUSE");
-        require(access_pass.isVerified(msg.sender), "MUST HAVE VERIFIED ACCESS PASS");
-        require(amount_ > 0, "CANNOT STAKE 0");
-
-        uint256 _old_multiplier_basis_points = _multiplier_basis_points[msg.sender];
-        _multiplier_basis_points[msg.sender] = metagame_data.getMultiplier(msg.sender, location_id);
-
-        _totalSupply -= _balances[msg.sender] * _old_multiplier_basis_points / 10000;
-        _totalSupply = _totalSupply + ((_balances[msg.sender]+amount_) * _multiplier_basis_points[msg.sender] / 10000);
-        _balances[msg.sender] = _balances[msg.sender] + amount_;
-        stakingToken.transferFrom(msg.sender, address(this), amount_);
-
-        emit Staked(msg.sender, amount_);
-    }
-
-    function informUpdateMultiplier(address addr_) public 
-    {
-        //Need to implement function that forces multiplier to update when data source updates.
-    }
-
-    function updateMultiplier(address addr_) internal returns (uint256 _mult_bp)
+    /// @param addr_ Address of the staker who needs to have their multiplier updated
+    /// @notice Updates an accounts bonus multiplier from the metagame metadata system.
+    /// @dev Underlying balance is assumed to be stored as a pre-multiplied quantity.
+    function updateMultiplier(address addr_) public updateReward(msg.sender) returns (uint256 _mult_bp)
     {
 	    _mult_bp = metagame_data.getMultiplier(addr_, location_id);
 
@@ -70,40 +57,76 @@ contract SCMetagameLocationRewards is StakingRewards {
         {
             uint256 _old_multiplier = _multiplier_basis_points[addr_];
             _multiplier_basis_points[addr_] = _mult_bp;
-            _totalSupply = _totalSupply - ((_balances[addr_] * _old_multiplier) / 10000);
-            _totalSupply = _totalSupply + ((_balances[addr_] * _mult_bp) / 10000);
+
+            _totalSupply -= _balances[addr_];
+            _balances[addr_] = (_balances[addr_] * _mult_bp) / _old_multiplier;
+            _totalSupply += _balances[addr_];
         }
     }
 
+    /// @notice Identical to base contract except that it uses a multiplier for bonus rewards and only specific users may deposit tokens. 
+    /// @notice See {StakingRewards-stake}.
+    function stake(uint256 amount_) external override nonReentrant notPaused updateReward(msg.sender) {
+        require(metagame_data.getMembership(msg.sender, location_id), "MUST BE IN HOUSE");
+        require(access_pass.isVerified(msg.sender), "MUST HAVE VERIFIED ACCESS PASS");
+        require(amount_ > 0, "CANNOT STAKE 0");
+
+        staked_supply += amount_;
+        user_stakes[msg.sender] += amount_;
+
+        uint256 multiplied_amount_ = amount_ * _multiplier_basis_points[msg.sender];
+        _totalSupply += multiplied_amount_;
+        _balances[msg.sender] += multiplied_amount_;
+
+        stakingToken.transferFrom(msg.sender, address(this), amount_);
+        emit Staked(msg.sender, amount_);
+    }
+
+    /// @notice Identical to base contract except that it uses a multiplier for bonus rewards and only specific users may deposit tokens. 
+    /// @notice See {StakingRewards-stake}.
     function withdraw(uint256 amount) public override nonReentrant updateReward(msg.sender) {
         require(amount > 0, "Cannot withdraw 0");
 
 	    uint256 _mult_bp = _multiplier_basis_points[msg.sender];
+        uint256 _multiplied_amount = (amount * _mult_bp);
 	
-        _totalSupply = _totalSupply - ((amount * _mult_bp) / 10000);
-        _balances[msg.sender] = _balances[msg.sender] - amount;
+        _totalSupply -= _multiplied_amount;
+        _balances[msg.sender] -= _multiplied_amount;
+
+        staked_supply -= amount;
+        user_stakes[msg.sender] -= amount;
         stakingToken.transfer(msg.sender, amount);
         emit Withdrawn(msg.sender, amount);
     }
 
-    function earned(address account) public override view returns (uint256 _earned) {
-        _earned = (
-	    	(( _multiplier_basis_points[account] * _balances[account]) / 10000) * 
-	    	(rewardPerToken() - userRewardPerTokenPaid[account])
-	    ) / 1e18 + 
-	    rewards[account];
+    function exit() override external {
+        withdraw(user_stakes[msg.sender]);
+        getReward();
     }
 
-    modifier updateReward(address account) override {
-	    updateMultiplier(msg.sender);
-        
-	    rewardPerTokenStored = rewardPerToken();
-        lastUpdateTime = lastTimeRewardApplicable();
-
-        if (account != address(0)) {
-            rewards[account] = earned(account);
-            userRewardPerTokenPaid[account] = rewardPerTokenStored;
+    function notifyRewardAmount(uint256 reward) external override onlyRewardsDistribution updateReward(address(0)) {
+        if (timestamp() >= periodFinish) {
+            rewardRate = reward / rewardsDuration;
+        } else {
+            uint256 remaining = periodFinish - timestamp();
+            uint256 leftover = remaining * rewardRate;
+            rewardRate = (reward + leftover) / rewardsDuration;
         }
-        _;
+
+        // Ensure the provided reward amount is not more than the balance in the contract.
+        // This keeps the reward rate in the right range, preventing overflows due to
+        // very high values of rewardRate in the earned and rewardsPerToken functions;
+        // Reward + leftover must be less than 2^256 / 10^18 to avoid overflow.
+        // If staking and rewards token are the same, ensure the balance reflects on the non-staked tokens.
+        uint balance = rewardsToken.balanceOf(address(this));
+        if(stakingToken == rewardsToken) {
+            balance -= staked_supply;
+        }
+
+        require(rewardRate <= balance / rewardsDuration, "Provided reward too high");
+
+        lastUpdateTime = timestamp();
+        periodFinish = timestamp() + rewardsDuration;
+        emit RewardAdded(reward);
     }
 }

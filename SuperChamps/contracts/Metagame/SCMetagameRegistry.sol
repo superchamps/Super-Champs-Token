@@ -4,6 +4,7 @@
 pragma solidity ^0.8.24;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "../Utils/SCPermissionedAccess.sol";
 import "../../interfaces/IPermissionsManager.sol";
 import "../../interfaces/ISCMetagameRegistry.sol";
 
@@ -11,10 +12,7 @@ import "../../interfaces/ISCMetagameRegistry.sol";
 /// @author Chance Santana-Wees (Coelacanth/Coel.eth)
 /// @notice Used to store arbitrary metadata associated with specific user IDs and Addresses.
 /// @dev Metadata is stored in a key-value store that maps string metadata keys to string values. Lookup can be indexed from user ID or from address.
-contract SCMetagameRegistry is ISCMetagameRegistry {
-    /// @notice The permissions registry.
-    IPermissionsManager immutable permissions;
-    
+contract SCMetagameRegistry is ISCMetagameRegistry, SCPermissionedAccess {    
     /// @notice Mapping of addresses to user id hashes
     mapping(address => bytes32) private address_to_uid_hash;
 
@@ -31,16 +29,8 @@ contract SCMetagameRegistry is ISCMetagameRegistry {
     /// @notice Stores the last used nonce for signature-based metadata updates
     mapping(string => uint256) public uid_hash_last_nonce;
 
-    /// @notice Function modifier which requires the sender to possess the global admin permission as recorded in "permissions"
-    modifier isGlobalAdmin() {
-        require(permissions.hasRole(IPermissionsManager.Role.GLOBAL_ADMIN, msg.sender));
-        _;
-    }
-
     /// @param permissions_ Address of the protocol permissions registry. Must conform to IPermissionsManager
-    constructor(address permissions_) {
-        permissions = IPermissionsManager(permissions_);
-    }
+    constructor(address permissions_) SCPermissionedAccess(permissions_) {}
 
     /// @notice Used to construct a message hash for signature-based metadata updates
     /// @param user_id_ The ID of the User
