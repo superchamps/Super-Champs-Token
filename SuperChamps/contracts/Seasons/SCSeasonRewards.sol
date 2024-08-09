@@ -8,6 +8,7 @@ import "../Utils/SCPermissionedAccess.sol";
 import "../../interfaces/IPermissionsManager.sol";
 import "../../interfaces/ISCSeasonRewards.sol";
 import "../../interfaces/ISCAccessPass.sol";
+import "../../interfaces/ISCMetagamePool.sol";
 
 /// @title Manager for the seasonal player rewards program.
 /// @author Chance Santana-Wees (Coelacanth/Coel.eth)
@@ -22,6 +23,9 @@ contract SCSeasonRewards is ISCSeasonRewards, SCPermissionedAccess{
 
     /// @notice The access pass SBT
     ISCAccessPass public access_pass;
+
+    /// @notice The metagame staking pool
+    ISCMetagamePool public staking_pool;
 
     ///@notice A list of seasons. A season's ID is its index in the list.
     ISCSeasonRewards.Season[] public seasons;
@@ -41,6 +45,7 @@ contract SCSeasonRewards is ISCSeasonRewards, SCPermissionedAccess{
     mapping(address => uint256) public player_last_signature_timestamp;
 
     event TreasurySet(address treasury);
+    event StakedRewards(address staker, uint256 rewards);
 
     ///@param permissions_ The address of the protocol permissions registry. Must conform to IPermissionsManager.
     ///@param token_ The address of the reward token. (The CHAMP token)
@@ -50,12 +55,14 @@ contract SCSeasonRewards is ISCSeasonRewards, SCPermissionedAccess{
         address permissions_, 
         address token_, 
         address treasury_,
-        address access_pass_) 
+        address access_pass_,
+        address staking_pool_) 
         SCPermissionedAccess(permissions_)
     {
         token = IERC20(token_);
         treasury = treasury_;
         access_pass = ISCAccessPass(access_pass_);
+        staking_pool = ISCMetagamePool(staking_pool_);
     }
 
     ///@notice Updates the address of the account/contract that the Seasons reward system pulls reward tokens from.
@@ -229,12 +236,13 @@ contract SCSeasonRewards is ISCSeasonRewards, SCPermissionedAccess{
     ///@notice Claim tokens rewarded to msg.sender in the specified season. Must have a verified Access Pass.
     ///@dev Callable only on seasons which have been finalized and whose claim duration has not elapsed.
     ///@param season_id_ The season to claim reward tokens from.
-    function claimReward(
+    function _preClaim(
         uint256 season_id_
-    ) external
+    ) internal 
+        returns (uint256)
     {
         require(claimed_rewards[season_id_][msg.sender] == 0, "REWARD CLAIMED");
-        require(access_pass.isVerified(msg.sender), "MUST HAVE VERIFIED AN ACCESS PASS");
+        //require(access_pass.isVerified(msg.sender), "MUST HAVE VERIFIED AN ACCESS PASS");
 
         Season storage _season = seasons[season_id_];
         require(isSeasonClaimingActive(_season, block.timestamp), "SEASON_CLAIM_ENDED");
@@ -245,8 +253,32 @@ contract SCSeasonRewards is ISCSeasonRewards, SCPermissionedAccess{
         _season.remaining_reward_amount -= _reward;
         claimed_rewards[season_id_][msg.sender] = _reward;
 
+        return _reward;
+    }
+
+    ///@notice Claim tokens to msg.sender
+    ///@dev Callable only on seasons which have been finalized and whose claim duration has not elapsed.
+    ///@param season_id_ The season to claim reward tokens from.
+    function claimReward(
+        uint256 season_id_
+    ) external
+    {
+        uint256 _reward = _preClaim(season_id_);
         bool transfer_success = token.transfer(msg.sender, _reward);
         require(transfer_success, "FAILED TRANSFER");
+    }
+
+    ///@notice Stake tokens claimed.
+    ///@dev Callable only on seasons which have been finalized and whose claim duration has not elapsed.
+    ///@param season_id_ The season to claim reward tokens from.
+    function stakeReward(
+        uint256 season_id_
+    ) external
+    {
+        uint256 _reward = _preClaim(season_id_);
+        token.approve(address(staking_pool), _reward);
+        staking_pool.stakeFor(msg.sender, _reward);
+        emit StakedRewards(msg.sender, _reward);
     }
 
     ///@notice get reward tokens claimable by a player in the specified season.
@@ -255,10 +287,10 @@ contract SCSeasonRewards is ISCSeasonRewards, SCPermissionedAccess{
         uint256 season_id_
     ) public view returns(uint256 _reward) 
     {
-        _reward = season_rewards[season_id_][msg.sender];
+        _reward = season_rewards[season_id_][msg.sender] - claimed_rewards[season_id_][msg.sender];
         Season storage _season = seasons[season_id_];
-        if( !isSeasonClaimingActive(_season, block.timestamp) || 
-            !access_pass.isVerified(msg.sender)) 
+        if( !isSeasonClaimingActive(_season, block.timestamp) ) //|| 
+            //!access_pass.isVerified(msg.sender)) 
         {
             _reward = 0;
         }
