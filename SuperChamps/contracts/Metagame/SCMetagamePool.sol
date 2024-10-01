@@ -65,16 +65,17 @@ contract SCMetagamePool is SCPermissionedAccess, ISCMetagamePool {
     /// @param amount_ Quantity of tokens to unstake/spend
     /// @param staker_ The address of the staker
     /// @param receiver_ The address of the reciever of the spent tokens
+    /// @param data_ data related to spent tokens
     /// @dev This does NOT trigger an Unstake event, allowing stakers to spend tokens without penalty
     /// @dev This is expected to be called from the spending contract, which must be first permissioned through a direct call to approve(...)
-    function spend(uint256 amount_, address staker_, address receiver_) external {
+    function spend(uint256 amount_, address staker_, address receiver_, string memory data_) external {
         if(staker_ != msg.sender) {
             uint256 approvedAmount = _user_to_approved_spend[staker_][msg.sender];
             require(approvedAmount >= amount_, "Insufficient allowance");
             _user_to_approved_spend[staker_][msg.sender] -= amount_;
         }
         uint256 _balance = _unstake(amount_, staker_, receiver_);
-        emit SpendFromStake(staker_, msg.sender, amount_, _balance);
+        emit SpendFromStake(staker_, msg.sender, amount_, _balance, receiver_, data_);
     }
 
     /// @notice Unstake tokens and transfer to staker

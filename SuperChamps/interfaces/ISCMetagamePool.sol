@@ -11,7 +11,7 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 interface ISCMetagamePool{
     event Stake(address staker, address source, uint256 amount, uint256 balance);
     event Unstake(address staker, uint256 amount, uint256 balance);
-    event SpendFromStake(address staker, address source, uint256 amount, uint256 balance);
+    event SpendFromStake(address staker, address source, uint256 amount, uint256 balance, address receiver, string data);
 
     error UnableToTransferTokens(address staker, uint256 amount);
     error UnableToUnstakeTokens(address staker, uint256 amount, uint256 total_staked_supply);
