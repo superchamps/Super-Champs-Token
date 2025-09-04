@@ -2,148 +2,6 @@
   "version": "3.4",
   "log": [
     {
-      "SuperChamps/contracts/Token/KiguMinter.sol:KiguMinter": {
-        "src": "SuperChamps/contracts/Token/KiguMinter.sol:7",
-        "version": {
-          "withMetadata": "672ae1ae238c94d4c76303ba5788ed8197b3d640ead11579445cb9f595b901d4",
-          "withoutMetadata": "db1f30b71ab24c562a0cf8ed33a94c0ab93df84e34ba64c592b853d252a3299f",
-          "linkedWithoutMetadata": "db1f30b71ab24c562a0cf8ed33a94c0ab93df84e34ba64c592b853d252a3299f"
-        },
-        "inherit": [],
-        "libraries": [],
-        "methods": [
-          "(address,address)",
-          "mintKiguToken()"
-        ],
-        "linkReferences": [],
-        "errors": [
-          {
-            "kind": "constructor",
-            "contract": "KiguMinter",
-            "src": "SuperChamps/contracts/Token/KiguMinter.sol:24"
-          },
-          {
-            "kind": "state-variable-immutable",
-            "name": "kigu",
-            "src": "SuperChamps/contracts/Token/KiguMinter.sol:11"
-          },
-          {
-            "kind": "state-variable-immutable",
-            "name": "emissionContract",
-            "src": "SuperChamps/contracts/Token/KiguMinter.sol:12"
-          }
-        ],
-        "layout": {
-          "storage": [
-            {
-              "label": "totalMinted",
-              "offset": 0,
-              "slot": "0",
-              "type": "t_uint256",
-              "contract": "KiguMinter",
-              "src": "SuperChamps/contracts/Token/KiguMinter.sol:14"
-            },
-            {
-              "label": "epochCount",
-              "offset": 0,
-              "slot": "1",
-              "type": "t_uint256",
-              "contract": "KiguMinter",
-              "src": "SuperChamps/contracts/Token/KiguMinter.sol:15"
-            },
-            {
-              "label": "activePeriod",
-              "offset": 0,
-              "slot": "2",
-              "type": "t_uint256",
-              "contract": "KiguMinter",
-              "src": "SuperChamps/contracts/Token/KiguMinter.sol:16"
-            },
-            {
-              "label": "lastEmission",
-              "offset": 0,
-              "slot": "3",
-              "type": "t_uint256",
-              "contract": "KiguMinter",
-              "src": "SuperChamps/contracts/Token/KiguMinter.sol:19"
-            }
-          ],
-          "types": {
-            "t_uint256": {
-              "label": "uint256",
-              "numberOfBytes": "32"
-            }
-          },
-          "layoutVersion": "1.2",
-          "flat": true,
-          "namespaces": {}
-        },
-        "solcVersion": "0.8.24"
-      },
-      "SuperChamps/interfaces/IKigu.sol:IKigu": {
-        "src": "SuperChamps/interfaces/IKigu.sol:5",
-        "inherit": [],
-        "libraries": [],
-        "methods": [
-          "mint(address,uint256)",
-          "burn(uint256)",
-          "burnFrom(address,uint256)"
-        ],
-        "linkReferences": [],
-        "errors": [],
-        "layout": {
-          "storage": [],
-          "types": {},
-          "layoutVersion": "1.2",
-          "flat": false,
-          "namespaces": {}
-        },
-        "solcVersion": "0.8.24"
-      }
-    },
-    {
-      "@openzeppelin/contracts/access/Ownable.sol:Ownable": {
-        "src": "@openzeppelin/contracts/access/Ownable.sol:20",
-        "inherit": [
-          "@openzeppelin/contracts/utils/Context.sol:Context"
-        ],
-        "libraries": [],
-        "methods": [
-          "owner()",
-          "renounceOwnership()",
-          "transferOwnership(address)"
-        ],
-        "linkReferences": [],
-        "errors": [
-          {
-            "kind": "constructor",
-            "contract": "Ownable",
-            "src": "@openzeppelin/contracts/access/Ownable.sol:38"
-          }
-        ],
-        "layout": {
-          "storage": [
-            {
-              "label": "_owner",
-              "offset": 0,
-              "slot": "0",
-              "type": "t_address",
-              "contract": "Ownable",
-              "src": "@openzeppelin/contracts/access/Ownable.sol:21"
-            }
-          ],
-          "types": {
-            "t_address": {
-              "label": "address",
-              "numberOfBytes": "20"
-            }
-          },
-          "layoutVersion": "1.2",
-          "flat": true,
-          "namespaces": {}
-        },
-        "solcVersion": "0.8.24"
-      },
       "@openzeppelin/contracts/token/ERC20/IERC20.sol:IERC20": {
         "src": "@openzeppelin/contracts/token/ERC20/IERC20.sol:9",
         "inherit": [],
@@ -167,270 +25,91 @@
         },
         "solcVersion": "0.8.24"
       },
-      "@openzeppelin/contracts/utils/Context.sol:Context": {
-        "src": "@openzeppelin/contracts/utils/Context.sol:16",
-        "inherit": [],
-        "libraries": [],
-        "methods": [],
-        "linkReferences": [],
-        "errors": [],
-        "layout": {
-          "storage": [],
-          "types": {},
-          "layoutVersion": "1.2",
-          "flat": false,
-          "namespaces": {}
-        },
-        "solcVersion": "0.8.24"
-      },
-      "SuperChamps/contracts/Token/KiguEmission.sol:KiguEmission": {
-        "src": "SuperChamps/contracts/Token/KiguEmission.sol:9",
+      "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:SCSeasonRewards": {
+        "src": "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:17",
         "version": {
-          "withMetadata": "89e27a2cd8ea76c40380f8d89bc8d3a6045c860dbe5acd8919d11c052924dc38",
-          "withoutMetadata": "fbbe77becff1096b1fa80eaf7122cd46bad3e438c47b4d517161c47342ec2a9e",
-          "linkedWithoutMetadata": "fbbe77becff1096b1fa80eaf7122cd46bad3e438c47b4d517161c47342ec2a9e"
+          "withMetadata": "bff754266121c8d97c7230ab3edd9cb6848b24e061dca1c28b2a6fd87d7acac6",
+          "withoutMetadata": "97ef3c3b12d9fc69e23c30b19e29190ff39da504651bb44d0940506a78b51799",
+          "linkedWithoutMetadata": "97ef3c3b12d9fc69e23c30b19e29190ff39da504651bb44d0940506a78b51799"
         },
         "inherit": [
-          "@openzeppelin/contracts/access/Ownable.sol:Ownable",
-          "@openzeppelin/contracts/utils/Context.sol:Context"
+          "SuperChamps/contracts/Utils/SCPermissionedAccess.sol:SCPermissionedAccess",
+          "SuperChamps/interfaces/ISCSeasonRewards.sol:ISCSeasonRewards"
         ],
         "libraries": [],
         "methods": [
-          "(address)",
-          "setMinter(address)",
-          "setEmissionManager(address)",
-          "setWalletsAndPercents(address[4],uint256[4])",
-          "mintTokenAndDistribute()",
-          "version()"
+          "(address,address,address,address)",
+          "setStakingPool(address)",
+          "setTreasury(address)",
+          "startSeason(uint256)",
+          "isSeasonActive((uint256,uint256,uint256,uint256,uint256,uint256))",
+          "isSeasonFinalized((uint256,uint256,uint256,uint256,uint256,uint256))",
+          "isSeasonEnded((uint256,uint256,uint256,uint256,uint256,uint256))",
+          "isSeasonClaimingActive((uint256,uint256,uint256,uint256,uint256,uint256))",
+          "isSeasonClaimingEnded((uint256,uint256,uint256,uint256,uint256,uint256))",
+          "endSeason(uint256)",
+          "revokeUnclaimedReward(uint256)",
+          "finalize(uint256,uint256,uint256)",
+          "reportRewards(uint256,address[],uint256[])",
+          "claimReward(uint256)",
+          "stakeReward(uint256)",
+          "getClaimableReward(uint256)",
+          "recoverERC20(address,uint256)"
         ],
         "linkReferences": [],
         "errors": [
           {
             "kind": "constructor",
-            "contract": "KiguEmission",
-            "src": "SuperChamps/contracts/Token/KiguEmission.sol:24"
-          }
-        ],
-        "layout": {
-          "storage": [
-            {
-              "label": "_owner",
-              "offset": 0,
-              "slot": "0",
-              "type": "t_address",
-              "contract": "Ownable",
-              "src": "@openzeppelin/contracts/access/Ownable.sol:21"
-            },
-            {
-              "label": "kiguToken",
-              "offset": 0,
-              "slot": "1",
-              "type": "t_contract(IERC20)225",
-              "contract": "KiguEmission",
-              "src": "SuperChamps/contracts/Token/KiguEmission.sol:10"
-            },
-            {
-              "label": "minter",
-              "offset": 0,
-              "slot": "2",
-              "type": "t_contract(IKiguMinter)543",
-              "contract": "KiguEmission",
-              "src": "SuperChamps/contracts/Token/KiguEmission.sol:11"
-            },
-            {
-              "label": "wallets",
-              "offset": 0,
-              "slot": "3",
-              "type": "t_array(t_address)4_storage",
-              "contract": "KiguEmission",
-              "src": "SuperChamps/contracts/Token/KiguEmission.sol:13"
-            },
-            {
-              "label": "percents",
-              "offset": 0,
-              "slot": "7",
-              "type": "t_array(t_uint256)4_storage",
-              "contract": "KiguEmission",
-              "src": "SuperChamps/contracts/Token/KiguEmission.sol:14"
-            },
-            {
-              "label": "emissionManager",
-              "offset": 0,
-              "slot": "11",
-              "type": "t_address",
-              "contract": "KiguEmission",
-              "src": "SuperChamps/contracts/Token/KiguEmission.sol:16"
-            }
-          ],
-          "types": {
-            "t_address": {
-              "label": "address",
-              "numberOfBytes": "20"
-            },
-            "t_array(t_address)4_storage": {
-              "label": "address[4]",
-              "numberOfBytes": "128"
-            },
-            "t_array(t_uint256)4_storage": {
-              "label": "uint256[4]",
-              "numberOfBytes": "128"
-            },
-            "t_contract(IERC20)225": {
-              "label": "contract IERC20",
-              "numberOfBytes": "20"
-            },
-            "t_contract(IKiguMinter)543": {
-              "label": "contract IKiguMinter",
-              "numberOfBytes": "20"
-            },
-            "t_uint256": {
-              "label": "uint256",
-              "numberOfBytes": "32"
-            }
+            "contract": "SCSeasonRewards",
+            "src": "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:51"
           },
-          "layoutVersion": "1.2",
-          "flat": true,
-          "namespaces": {}
-        },
-        "solcVersion": "0.8.24"
-      },
-      "SuperChamps/interfaces/IKiguMinter.sol:IKiguMinter": {
-        "src": "SuperChamps/interfaces/IKiguMinter.sol:5",
-        "inherit": [],
-        "libraries": [],
-        "methods": [
-          "mintKiguToken()"
-        ],
-        "linkReferences": [],
-        "errors": [],
-        "layout": {
-          "storage": [],
-          "types": {},
-          "layoutVersion": "1.2",
-          "flat": false,
-          "namespaces": {}
-        },
-        "solcVersion": "0.8.24"
-      }
-    },
-    {
-      "@openzeppelin/contracts/interfaces/draft-IERC6093.sol:IERC1155Errors": {
-        "src": "@openzeppelin/contracts/interfaces/draft-IERC6093.sol:113",
-        "inherit": [],
-        "libraries": [],
-        "methods": [],
-        "linkReferences": [],
-        "errors": [],
-        "layout": {
-          "storage": [],
-          "types": {},
-          "layoutVersion": "1.2",
-          "flat": false,
-          "namespaces": {}
-        },
-        "solcVersion": "0.8.24"
-      },
-      "@openzeppelin/contracts/interfaces/draft-IERC6093.sol:IERC20Errors": {
-        "src": "@openzeppelin/contracts/interfaces/draft-IERC6093.sol:9",
-        "inherit": [],
-        "libraries": [],
-        "methods": [],
-        "linkReferences": [],
-        "errors": [],
-        "layout": {
-          "storage": [],
-          "types": {},
-          "layoutVersion": "1.2",
-          "flat": false,
-          "namespaces": {}
-        },
-        "solcVersion": "0.8.24"
-      },
-      "@openzeppelin/contracts/interfaces/draft-IERC6093.sol:IERC721Errors": {
-        "src": "@openzeppelin/contracts/interfaces/draft-IERC6093.sol:55",
-        "inherit": [],
-        "libraries": [],
-        "methods": [],
-        "linkReferences": [],
-        "errors": [],
-        "layout": {
-          "storage": [],
-          "types": {},
-          "layoutVersion": "1.2",
-          "flat": false,
-          "namespaces": {}
-        },
-        "solcVersion": "0.8.24"
-      },
-      "@openzeppelin/contracts/token/ERC20/ERC20.sol:ERC20": {
-        "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:29",
-        "inherit": [
-          "@openzeppelin/contracts/interfaces/draft-IERC6093.sol:IERC20Errors",
-          "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol:IERC20Metadata",
-          "@openzeppelin/contracts/token/ERC20/IERC20.sol:IERC20",
-          "@openzeppelin/contracts/utils/Context.sol:Context"
-        ],
-        "libraries": [],
-        "methods": [
-          "name()",
-          "symbol()",
-          "decimals()",
-          "totalSupply()",
-          "balanceOf(address)",
-          "transfer(address,uint256)",
-          "allowance(address,address)",
-          "approve(address,uint256)",
-          "transferFrom(address,address,uint256)"
-        ],
-        "linkReferences": [],
-        "errors": [
           {
-            "kind": "constructor",
-            "contract": "ERC20",
-            "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:44"
+            "kind": "state-variable-immutable",
+            "name": "token",
+            "src": "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:19"
           }
         ],
         "layout": {
           "storage": [
             {
-              "label": "_balances",
+              "label": "treasury",
               "offset": 0,
               "slot": "0",
-              "type": "t_mapping(t_address,t_uint256)",
-              "contract": "ERC20",
-              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:30"
+              "type": "t_address",
+              "contract": "SCSeasonRewards",
+              "src": "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:22"
             },
             {
-              "label": "_allowances",
+              "label": "staking_pool",
               "offset": 0,
               "slot": "1",
-              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
-              "contract": "ERC20",
-              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:32"
+              "type": "t_contract(ISCMetagamePool)1160",
+              "contract": "SCSeasonRewards",
+              "src": "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:26"
             },
             {
-              "label": "_totalSupply",
+              "label": "seasons",
               "offset": 0,
               "slot": "2",
-              "type": "t_uint256",
-              "contract": "ERC20",
-              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:34"
+              "type": "t_array(t_struct(Season)1176_storage)dyn_storage",
+              "contract": "SCSeasonRewards",
+              "src": "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:29"
             },
             {
-              "label": "_name",
+              "label": "season_rewards",
               "offset": 0,
               "slot": "3",
-              "type": "t_string_storage",
-              "contract": "ERC20",
-              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:36"
+              "type": "t_mapping(t_uint256,t_mapping(t_address,t_uint256))",
+              "contract": "SCSeasonRewards",
+              "src": "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:32"
             },
             {
-              "label": "_symbol",
+              "label": "claimed_rewards",
               "offset": 0,
               "slot": "4",
-              "type": "t_string_storage",
-              "contract": "ERC20",
-              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:37"
+              "type": "t_mapping(t_uint256,t_mapping(t_address,t_uint256))",
+              "contract": "SCSeasonRewards",
+              "src": "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:35"
             }
           ],
           "types": {
@@ -438,17 +117,63 @@
               "label": "address",
               "numberOfBytes": "20"
             },
-            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
-              "label": "mapping(address => mapping(address => uint256))",
+            "t_array(t_struct(Season)1176_storage)dyn_storage": {
+              "label": "struct ISCSeasonRewards.Season[]",
               "numberOfBytes": "32"
+            },
+            "t_contract(ISCMetagamePool)1160": {
+              "label": "contract ISCMetagamePool",
+              "numberOfBytes": "20"
             },
             "t_mapping(t_address,t_uint256)": {
               "label": "mapping(address => uint256)",
               "numberOfBytes": "32"
             },
-            "t_string_storage": {
-              "label": "string",
+            "t_mapping(t_uint256,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(uint256 => mapping(address => uint256))",
               "numberOfBytes": "32"
+            },
+            "t_struct(Season)1176_storage": {
+              "label": "struct ISCSeasonRewards.Season",
+              "members": [
+                {
+                  "label": "id",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "start_time",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "end_time",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "2"
+                },
+                {
+                  "label": "reward_amount",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "3"
+                },
+                {
+                  "label": "remaining_reward_amount",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "4"
+                },
+                {
+                  "label": "claim_end_time",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "5"
+                }
+              ],
+              "numberOfBytes": "192"
             },
             "t_uint256": {
               "label": "uint256",
@@ -461,283 +186,115 @@
         },
         "solcVersion": "0.8.24"
       },
-      "@openzeppelin/contracts/token/ERC20/IERC20.sol:IERC20": {
-        "src": "@openzeppelin/contracts/token/ERC20/IERC20.sol:9",
-        "inherit": [],
-        "libraries": [],
-        "methods": [
-          "totalSupply()",
-          "balanceOf(address)",
-          "transfer(address,uint256)",
-          "allowance(address,address)",
-          "approve(address,uint256)",
-          "transferFrom(address,address,uint256)"
-        ],
-        "linkReferences": [],
-        "errors": [],
-        "layout": {
-          "storage": [],
-          "types": {},
-          "layoutVersion": "1.2",
-          "flat": false,
-          "namespaces": {}
-        },
-        "solcVersion": "0.8.24"
-      },
-      "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol:ERC20Burnable": {
-        "src": "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol:14",
-        "inherit": [
-          "@openzeppelin/contracts/token/ERC20/ERC20.sol:ERC20",
-          "@openzeppelin/contracts/interfaces/draft-IERC6093.sol:IERC20Errors",
-          "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol:IERC20Metadata",
-          "@openzeppelin/contracts/token/ERC20/IERC20.sol:IERC20",
-          "@openzeppelin/contracts/utils/Context.sol:Context"
-        ],
-        "libraries": [],
-        "methods": [
-          "burn(uint256)",
-          "burnFrom(address,uint256)"
-        ],
-        "linkReferences": [],
-        "errors": [],
-        "layout": {
-          "storage": [
-            {
-              "label": "_balances",
-              "offset": 0,
-              "slot": "0",
-              "type": "t_mapping(t_address,t_uint256)",
-              "contract": "ERC20",
-              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:30"
-            },
-            {
-              "label": "_allowances",
-              "offset": 0,
-              "slot": "1",
-              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
-              "contract": "ERC20",
-              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:32"
-            },
-            {
-              "label": "_totalSupply",
-              "offset": 0,
-              "slot": "2",
-              "type": "t_uint256",
-              "contract": "ERC20",
-              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:34"
-            },
-            {
-              "label": "_name",
-              "offset": 0,
-              "slot": "3",
-              "type": "t_string_storage",
-              "contract": "ERC20",
-              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:36"
-            },
-            {
-              "label": "_symbol",
-              "offset": 0,
-              "slot": "4",
-              "type": "t_string_storage",
-              "contract": "ERC20",
-              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:37"
-            }
-          ],
-          "types": {
-            "t_address": {
-              "label": "address",
-              "numberOfBytes": "20"
-            },
-            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
-              "label": "mapping(address => mapping(address => uint256))",
-              "numberOfBytes": "32"
-            },
-            "t_mapping(t_address,t_uint256)": {
-              "label": "mapping(address => uint256)",
-              "numberOfBytes": "32"
-            },
-            "t_string_storage": {
-              "label": "string",
-              "numberOfBytes": "32"
-            },
-            "t_uint256": {
-              "label": "uint256",
-              "numberOfBytes": "32"
-            }
-          },
-          "layoutVersion": "1.2",
-          "flat": true,
-          "namespaces": {}
-        },
-        "solcVersion": "0.8.24"
-      },
-      "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol:IERC20Metadata": {
-        "src": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol:11",
-        "inherit": [
-          "@openzeppelin/contracts/token/ERC20/IERC20.sol:IERC20"
-        ],
-        "libraries": [],
-        "methods": [
-          "name()",
-          "symbol()",
-          "decimals()"
-        ],
-        "linkReferences": [],
-        "errors": [],
-        "layout": {
-          "storage": [],
-          "types": {},
-          "layoutVersion": "1.2",
-          "flat": false,
-          "namespaces": {}
-        },
-        "solcVersion": "0.8.24"
-      },
-      "@openzeppelin/contracts/utils/Context.sol:Context": {
-        "src": "@openzeppelin/contracts/utils/Context.sol:16",
-        "inherit": [],
-        "libraries": [],
-        "methods": [],
-        "linkReferences": [],
-        "errors": [],
-        "layout": {
-          "storage": [],
-          "types": {},
-          "layoutVersion": "1.2",
-          "flat": false,
-          "namespaces": {}
-        },
-        "solcVersion": "0.8.24"
-      },
-      "SuperChamps/contracts/Token/KiguToken.sol:KiguToken": {
-        "src": "SuperChamps/contracts/Token/KiguToken.sol:8",
+      "SuperChamps/contracts/Utils/SCPermissionedAccess.sol:SCPermissionedAccess": {
+        "src": "SuperChamps/contracts/Utils/SCPermissionedAccess.sol:8",
         "version": {
-          "withMetadata": "980d81e482c2d04fea5906c52fbfede1457ba100f5753eeb0e547787c5e545c6",
-          "withoutMetadata": "7173452a1166197b8d31dd393a327b7de31efaef7bb506d53a646648a33c8f25",
-          "linkedWithoutMetadata": "7173452a1166197b8d31dd393a327b7de31efaef7bb506d53a646648a33c8f25"
+          "withMetadata": "cda208d1e79d4f1c027827264effec24d66537a7e286c45fd5312aa4266eefef",
+          "withoutMetadata": "e52a5b64122c366b5012fcd1b1893f3f456b8029ebfed479cfce7288a070b2c0",
+          "linkedWithoutMetadata": "e52a5b64122c366b5012fcd1b1893f3f456b8029ebfed479cfce7288a070b2c0"
         },
-        "inherit": [
-          "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol:ERC20Burnable",
-          "@openzeppelin/contracts/token/ERC20/ERC20.sol:ERC20",
-          "@openzeppelin/contracts/interfaces/draft-IERC6093.sol:IERC20Errors",
-          "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol:IERC20Metadata",
-          "@openzeppelin/contracts/token/ERC20/IERC20.sol:IERC20",
-          "@openzeppelin/contracts/utils/Context.sol:Context"
-        ],
+        "inherit": [],
         "libraries": [],
         "methods": [
-          "()",
-          "initialMint(address)",
-          "mint(address,uint256)",
-          "setMinter(address)"
+          "(address)"
         ],
         "linkReferences": [],
         "errors": [
           {
             "kind": "constructor",
-            "contract": "KiguToken",
-            "src": "SuperChamps/contracts/Token/KiguToken.sol:14"
+            "contract": "SCPermissionedAccess",
+            "src": "SuperChamps/contracts/Utils/SCPermissionedAccess.sol:23"
+          },
+          {
+            "kind": "state-variable-immutable",
+            "name": "permissions",
+            "src": "SuperChamps/contracts/Utils/SCPermissionedAccess.sol:9"
           }
         ],
         "layout": {
-          "storage": [
-            {
-              "label": "_balances",
-              "offset": 0,
-              "slot": "0",
-              "type": "t_mapping(t_address,t_uint256)",
-              "contract": "ERC20",
-              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:30"
-            },
-            {
-              "label": "_allowances",
-              "offset": 0,
-              "slot": "1",
-              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
-              "contract": "ERC20",
-              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:32"
-            },
-            {
-              "label": "_totalSupply",
-              "offset": 0,
-              "slot": "2",
-              "type": "t_uint256",
-              "contract": "ERC20",
-              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:34"
-            },
-            {
-              "label": "_name",
-              "offset": 0,
-              "slot": "3",
-              "type": "t_string_storage",
-              "contract": "ERC20",
-              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:36"
-            },
-            {
-              "label": "_symbol",
-              "offset": 0,
-              "slot": "4",
-              "type": "t_string_storage",
-              "contract": "ERC20",
-              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:37"
-            },
-            {
-              "label": "minter",
-              "offset": 0,
-              "slot": "5",
-              "type": "t_address",
-              "contract": "KiguToken",
-              "src": "SuperChamps/contracts/Token/KiguToken.sol:9"
-            },
-            {
-              "label": "isInitialMintDone",
-              "offset": 20,
-              "slot": "5",
-              "type": "t_bool",
-              "contract": "KiguToken",
-              "src": "SuperChamps/contracts/Token/KiguToken.sol:10"
-            }
-          ],
-          "types": {
-            "t_address": {
-              "label": "address",
-              "numberOfBytes": "20"
-            },
-            "t_bool": {
-              "label": "bool",
-              "numberOfBytes": "1"
-            },
-            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
-              "label": "mapping(address => mapping(address => uint256))",
-              "numberOfBytes": "32"
-            },
-            "t_mapping(t_address,t_uint256)": {
-              "label": "mapping(address => uint256)",
-              "numberOfBytes": "32"
-            },
-            "t_string_storage": {
-              "label": "string",
-              "numberOfBytes": "32"
-            },
-            "t_uint256": {
-              "label": "uint256",
-              "numberOfBytes": "32"
-            }
-          },
+          "storage": [],
+          "types": {},
           "layoutVersion": "1.2",
-          "flat": true,
+          "flat": false,
           "namespaces": {}
         },
         "solcVersion": "0.8.24"
       },
-      "SuperChamps/interfaces/IKigu.sol:IKigu": {
-        "src": "SuperChamps/interfaces/IKigu.sol:5",
+      "SuperChamps/interfaces/IPermissionsManager.sol:IPermissionsManager": {
+        "src": "SuperChamps/interfaces/IPermissionsManager.sol:8",
         "inherit": [],
         "libraries": [],
         "methods": [
-          "mint(address,uint256)",
-          "burn(uint256)",
-          "burnFrom(address,uint256)"
+          "hasRole(uint8,address)",
+          "addRole(uint8,address)",
+          "removeRole(uint8,address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.24"
+      },
+      "SuperChamps/interfaces/ISCAccessPass.sol:ISCAccessPass": {
+        "src": "SuperChamps/interfaces/ISCAccessPass.sol:8",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "isPassHolder(address)",
+          "isVerified(address)",
+          "getLevel(address)",
+          "getLevel(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.24"
+      },
+      "SuperChamps/interfaces/ISCMetagamePool.sol:ISCMetagamePool": {
+        "src": "SuperChamps/interfaces/ISCMetagamePool.sol:11",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "stake(uint256)",
+          "stakeFor(address,uint256)",
+          "approve(address,uint256)",
+          "spend(uint256,address,address,string)",
+          "unstake(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.24"
+      },
+      "SuperChamps/interfaces/ISCSeasonRewards.sol:ISCSeasonRewards": {
+        "src": "SuperChamps/interfaces/ISCSeasonRewards.sol:8",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "startSeason(uint256)",
+          "endSeason(uint256)",
+          "finalize(uint256,uint256,uint256)",
+          "reportRewards(uint256,address[],uint256[])",
+          "claimReward(uint256)",
+          "getClaimableReward(uint256)",
+          "revokeUnclaimedReward(uint256)"
         ],
         "linkReferences": [],
         "errors": [],
@@ -2524,7 +2081,7 @@
               "label": "metadata_registry",
               "offset": 0,
               "slot": "0",
-              "type": "t_contract(ISCMetagameRegistry)25189",
+              "type": "t_contract(ISCMetagameRegistry)25247",
               "contract": "SCMetagameGenericDataView",
               "src": "SuperChamps/contracts/Metagame/SCMetagameGenericDataView.sol:19"
             },
@@ -2532,21 +2089,21 @@
               "label": "location_views",
               "offset": 0,
               "slot": "1",
-              "type": "t_mapping(t_string_memory_ptr,t_contract(ISCMetagameDataSource)25055)",
+              "type": "t_mapping(t_string_memory_ptr,t_contract(ISCMetagameDataSource)25113)",
               "contract": "SCMetagameGenericDataView",
               "src": "SuperChamps/contracts/Metagame/SCMetagameGenericDataView.sol:22"
             }
           ],
           "types": {
-            "t_contract(ISCMetagameDataSource)25055": {
+            "t_contract(ISCMetagameDataSource)25113": {
               "label": "contract ISCMetagameDataSource",
               "numberOfBytes": "20"
             },
-            "t_contract(ISCMetagameRegistry)25189": {
+            "t_contract(ISCMetagameRegistry)25247": {
               "label": "contract ISCMetagameRegistry",
               "numberOfBytes": "20"
             },
-            "t_mapping(t_string_memory_ptr,t_contract(ISCMetagameDataSource)25055)": {
+            "t_mapping(t_string_memory_ptr,t_contract(ISCMetagameDataSource)25113)": {
               "label": "mapping(string => contract ISCMetagameDataSource)",
               "numberOfBytes": "32"
             },
@@ -2751,7 +2308,7 @@
               "label": "access_pass",
               "offset": 0,
               "slot": "17",
-              "type": "t_contract(ISCAccessPass)24946",
+              "type": "t_contract(ISCAccessPass)25004",
               "contract": "SCMetagameLocationRewards",
               "src": "SuperChamps/contracts/Metagame/SCMetagameLocationRewards.sol:22"
             },
@@ -2793,7 +2350,7 @@
               "label": "contract IERC20",
               "numberOfBytes": "20"
             },
-            "t_contract(ISCAccessPass)24946": {
+            "t_contract(ISCAccessPass)25004": {
               "label": "contract ISCAccessPass",
               "numberOfBytes": "20"
             },
@@ -2881,7 +2438,7 @@
               "label": "data_view",
               "offset": 0,
               "slot": "0",
-              "type": "t_contract(ISCMetagameDataSource)25055",
+              "type": "t_contract(ISCMetagameDataSource)25113",
               "contract": "SCMetagameLocations",
               "src": "SuperChamps/contracts/Metagame/SCMetagameLocations.sol:26"
             },
@@ -2889,7 +2446,7 @@
               "label": "access_pass",
               "offset": 0,
               "slot": "1",
-              "type": "t_contract(ISCAccessPass)24946",
+              "type": "t_contract(ISCAccessPass)25004",
               "contract": "SCMetagameLocations",
               "src": "SuperChamps/contracts/Metagame/SCMetagameLocations.sol:29"
             },
@@ -2963,11 +2520,11 @@
               "label": "uint256[]",
               "numberOfBytes": "32"
             },
-            "t_contract(ISCAccessPass)24946": {
+            "t_contract(ISCAccessPass)25004": {
               "label": "contract ISCAccessPass",
               "numberOfBytes": "20"
             },
-            "t_contract(ISCMetagameDataSource)25055": {
+            "t_contract(ISCMetagameDataSource)25113": {
               "label": "contract ISCMetagameDataSource",
               "numberOfBytes": "20"
             },
@@ -3369,7 +2926,7 @@
               "label": "_renderer",
               "offset": 0,
               "slot": "6",
-              "type": "t_contract(IERC721MetadataRenderer)24827",
+              "type": "t_contract(IERC721MetadataRenderer)24885",
               "contract": "SCAccessPass",
               "src": "SuperChamps/contracts/NFTs/SCAccessPass.sol:18"
             },
@@ -3427,7 +2984,7 @@
               "label": "bool",
               "numberOfBytes": "1"
             },
-            "t_contract(IERC721MetadataRenderer)24827": {
+            "t_contract(IERC721MetadataRenderer)24885": {
               "label": "contract IERC721MetadataRenderer",
               "numberOfBytes": "20"
             },
@@ -3503,7 +3060,7 @@
               "label": "_access_pass",
               "offset": 0,
               "slot": "0",
-              "type": "t_contract(ISCAccessPass)24946",
+              "type": "t_contract(ISCAccessPass)25004",
               "contract": "SCAccessPassRenderer",
               "src": "SuperChamps/contracts/NFTs/SCAccessPassRenderer.sol:21"
             },
@@ -3545,7 +3102,7 @@
               "label": "bool",
               "numberOfBytes": "1"
             },
-            "t_contract(ISCAccessPass)24946": {
+            "t_contract(ISCAccessPass)25004": {
               "label": "contract ISCAccessPass",
               "numberOfBytes": "20"
             },
@@ -3752,7 +3309,7 @@
               "label": "_renderer",
               "offset": 0,
               "slot": "6",
-              "type": "t_contract(IERC721MetadataRenderer)24827",
+              "type": "t_contract(IERC721MetadataRenderer)24885",
               "contract": "SCTempLockedNFT",
               "src": "SuperChamps/contracts/NFTs/SCTempLockedNFT.sol:26"
             },
@@ -3806,7 +3363,7 @@
               "label": "bool",
               "numberOfBytes": "1"
             },
-            "t_contract(IERC721MetadataRenderer)24827": {
+            "t_contract(IERC721MetadataRenderer)24885": {
               "label": "contract IERC721MetadataRenderer",
               "numberOfBytes": "20"
             },
@@ -4072,7 +3629,7 @@
               "label": "memeLeaderboards",
               "offset": 0,
               "slot": "0",
-              "type": "t_array(t_struct(MemeLeaderboard)24967_storage)dyn_storage",
+              "type": "t_array(t_struct(MemeLeaderboard)25025_storage)dyn_storage",
               "contract": "SCMLRewards",
               "src": "SuperChamps/contracts/Seasons/SCMLRewards.sol:18"
             },
@@ -4102,7 +3659,7 @@
               "label": "address[]",
               "numberOfBytes": "32"
             },
-            "t_array(t_struct(MemeLeaderboard)24967_storage)dyn_storage": {
+            "t_array(t_struct(MemeLeaderboard)25025_storage)dyn_storage": {
               "label": "struct ISCMLRewards.MemeLeaderboard[]",
               "numberOfBytes": "32"
             },
@@ -4122,7 +3679,7 @@
               "label": "mapping(uint256 => mapping(address => mapping(address => uint256)))",
               "numberOfBytes": "32"
             },
-            "t_struct(MemeLeaderboard)24967_storage": {
+            "t_struct(MemeLeaderboard)25025_storage": {
               "label": "struct ISCMLRewards.MemeLeaderboard",
               "members": [
                 {
@@ -4184,9 +3741,9 @@
       "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:SCSeasonRewards": {
         "src": "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:17",
         "version": {
-          "withMetadata": "cb963853b43313affaef8959a49141f63ed427a7fa63359c524fcd818b0e8198",
-          "withoutMetadata": "dd3dd109d0d3159524025c23be697d007d6e4103fa62a08adbc117b6c911a3ff",
-          "linkedWithoutMetadata": "dd3dd109d0d3159524025c23be697d007d6e4103fa62a08adbc117b6c911a3ff"
+          "withMetadata": "bff754266121c8d97c7230ab3edd9cb6848b24e061dca1c28b2a6fd87d7acac6",
+          "withoutMetadata": "97ef3c3b12d9fc69e23c30b19e29190ff39da504651bb44d0940506a78b51799",
+          "linkedWithoutMetadata": "97ef3c3b12d9fc69e23c30b19e29190ff39da504651bb44d0940506a78b51799"
         },
         "inherit": [
           "SuperChamps/contracts/Utils/SCPermissionedAccess.sol:SCPermissionedAccess",
@@ -4194,15 +3751,15 @@
         ],
         "libraries": [],
         "methods": [
-          "(address,address,address,address,address)",
+          "(address,address,address,address)",
           "setStakingPool(address)",
           "setTreasury(address)",
           "startSeason(uint256)",
-          "isSeasonActive((uint256,uint256,uint256,uint256,uint256,uint256),uint256)",
+          "isSeasonActive((uint256,uint256,uint256,uint256,uint256,uint256))",
           "isSeasonFinalized((uint256,uint256,uint256,uint256,uint256,uint256))",
-          "isSeasonEnded((uint256,uint256,uint256,uint256,uint256,uint256),uint256)",
-          "isSeasonClaimingActive((uint256,uint256,uint256,uint256,uint256,uint256),uint256)",
-          "isSeasonClaimingEnded((uint256,uint256,uint256,uint256,uint256,uint256),uint256)",
+          "isSeasonEnded((uint256,uint256,uint256,uint256,uint256,uint256))",
+          "isSeasonClaimingActive((uint256,uint256,uint256,uint256,uint256,uint256))",
+          "isSeasonClaimingEnded((uint256,uint256,uint256,uint256,uint256,uint256))",
           "endSeason(uint256)",
           "revokeUnclaimedReward(uint256)",
           "finalize(uint256,uint256,uint256)",
@@ -4217,7 +3774,7 @@
           {
             "kind": "constructor",
             "contract": "SCSeasonRewards",
-            "src": "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:54"
+            "src": "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:51"
           },
           {
             "kind": "state-variable-immutable",
@@ -4236,60 +3793,36 @@
               "src": "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:22"
             },
             {
-              "label": "access_pass",
-              "offset": 0,
-              "slot": "1",
-              "type": "t_contract(ISCAccessPass)24946",
-              "contract": "SCSeasonRewards",
-              "src": "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:25"
-            },
-            {
               "label": "staking_pool",
               "offset": 0,
-              "slot": "2",
-              "type": "t_contract(ISCMetagamePool)25143",
+              "slot": "1",
+              "type": "t_contract(ISCMetagamePool)25201",
               "contract": "SCSeasonRewards",
-              "src": "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:28"
+              "src": "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:26"
             },
             {
               "label": "seasons",
               "offset": 0,
-              "slot": "3",
-              "type": "t_array(t_struct(Season)25205_storage)dyn_storage",
+              "slot": "2",
+              "type": "t_array(t_struct(Season)25263_storage)dyn_storage",
               "contract": "SCSeasonRewards",
-              "src": "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:31"
+              "src": "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:29"
             },
             {
               "label": "season_rewards",
               "offset": 0,
-              "slot": "4",
+              "slot": "3",
               "type": "t_mapping(t_uint256,t_mapping(t_address,t_uint256))",
               "contract": "SCSeasonRewards",
-              "src": "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:34"
+              "src": "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:32"
             },
             {
               "label": "claimed_rewards",
               "offset": 0,
-              "slot": "5",
+              "slot": "4",
               "type": "t_mapping(t_uint256,t_mapping(t_address,t_uint256))",
               "contract": "SCSeasonRewards",
-              "src": "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:37"
-            },
-            {
-              "label": "consumed_signatures",
-              "offset": 0,
-              "slot": "6",
-              "type": "t_mapping(t_bytes_memory_ptr,t_bool)",
-              "contract": "SCSeasonRewards",
-              "src": "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:41"
-            },
-            {
-              "label": "player_last_signature_timestamp",
-              "offset": 0,
-              "slot": "7",
-              "type": "t_mapping(t_address,t_uint256)",
-              "contract": "SCSeasonRewards",
-              "src": "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:45"
+              "src": "SuperChamps/contracts/Seasons/SCSeasonRewards.sol:35"
             }
           ],
           "types": {
@@ -4297,23 +3830,11 @@
               "label": "address",
               "numberOfBytes": "20"
             },
-            "t_array(t_struct(Season)25205_storage)dyn_storage": {
+            "t_array(t_struct(Season)25263_storage)dyn_storage": {
               "label": "struct ISCSeasonRewards.Season[]",
               "numberOfBytes": "32"
             },
-            "t_bool": {
-              "label": "bool",
-              "numberOfBytes": "1"
-            },
-            "t_bytes_memory_ptr": {
-              "label": "bytes",
-              "numberOfBytes": "32"
-            },
-            "t_contract(ISCAccessPass)24946": {
-              "label": "contract ISCAccessPass",
-              "numberOfBytes": "20"
-            },
-            "t_contract(ISCMetagamePool)25143": {
+            "t_contract(ISCMetagamePool)25201": {
               "label": "contract ISCMetagamePool",
               "numberOfBytes": "20"
             },
@@ -4321,15 +3842,11 @@
               "label": "mapping(address => uint256)",
               "numberOfBytes": "32"
             },
-            "t_mapping(t_bytes_memory_ptr,t_bool)": {
-              "label": "mapping(bytes => bool)",
-              "numberOfBytes": "32"
-            },
             "t_mapping(t_uint256,t_mapping(t_address,t_uint256))": {
               "label": "mapping(uint256 => mapping(address => uint256))",
               "numberOfBytes": "32"
             },
-            "t_struct(Season)25205_storage": {
+            "t_struct(Season)25263_storage": {
               "label": "struct ISCSeasonRewards.Season",
               "members": [
                 {
@@ -4374,9 +3891,6 @@
             "t_uint256": {
               "label": "uint256",
               "numberOfBytes": "32"
-            },
-            "t_bytes_storage": {
-              "label": "bytes"
             }
           },
           "layoutVersion": "1.2",
@@ -4515,9 +4029,9 @@
       "SuperChamps/contracts/Token/KiguEmission.sol:KiguEmission": {
         "src": "SuperChamps/contracts/Token/KiguEmission.sol:9",
         "version": {
-          "withMetadata": "89e27a2cd8ea76c40380f8d89bc8d3a6045c860dbe5acd8919d11c052924dc38",
-          "withoutMetadata": "fbbe77becff1096b1fa80eaf7122cd46bad3e438c47b4d517161c47342ec2a9e",
-          "linkedWithoutMetadata": "fbbe77becff1096b1fa80eaf7122cd46bad3e438c47b4d517161c47342ec2a9e"
+          "withMetadata": "5211c12da1ef5c9c5a8a8a8c46e400c2f5671038ecfa0521e77275306ab2c6c1",
+          "withoutMetadata": "8545697f56ecbfd3aacde1cd2aa861ea2bdc870a5b15820ff66cb91a9816d84a",
+          "linkedWithoutMetadata": "8545697f56ecbfd3aacde1cd2aa861ea2bdc870a5b15820ff66cb91a9816d84a"
         },
         "inherit": [
           "@openzeppelin/contracts/access/Ownable.sol:Ownable",
@@ -4562,7 +4076,7 @@
               "label": "minter",
               "offset": 0,
               "slot": "2",
-              "type": "t_contract(IKiguMinter)24860",
+              "type": "t_contract(IKiguMinter)24918",
               "contract": "KiguEmission",
               "src": "SuperChamps/contracts/Token/KiguEmission.sol:11"
             },
@@ -4608,7 +4122,7 @@
               "label": "contract IERC20",
               "numberOfBytes": "20"
             },
-            "t_contract(IKiguMinter)24860": {
+            "t_contract(IKiguMinter)24918": {
               "label": "contract IKiguMinter",
               "numberOfBytes": "20"
             },
@@ -5223,7 +4737,7 @@
               "label": "role_mapping",
               "offset": 0,
               "slot": "0",
-              "type": "t_mapping(t_address,t_mapping(t_enum(Role)24880,t_bool))",
+              "type": "t_mapping(t_address,t_mapping(t_enum(Role)24938,t_bool))",
               "contract": "PermissionsManager",
               "src": "SuperChamps/contracts/Utils/PermissionsManager.sol:15"
             },
@@ -5245,7 +4759,7 @@
               "label": "bool",
               "numberOfBytes": "1"
             },
-            "t_enum(Role)24880": {
+            "t_enum(Role)24938": {
               "label": "enum IPermissionsManager.Role",
               "members": [
                 "ANY",
@@ -5266,7 +4780,7 @@
               ],
               "numberOfBytes": "1"
             },
-            "t_mapping(t_address,t_mapping(t_enum(Role)24880,t_bool))": {
+            "t_mapping(t_address,t_mapping(t_enum(Role)24938,t_bool))": {
               "label": "mapping(address => mapping(enum IPermissionsManager.Role => bool))",
               "numberOfBytes": "32"
             },
@@ -5274,7 +4788,7 @@
               "label": "mapping(address => uint256)",
               "numberOfBytes": "32"
             },
-            "t_mapping(t_enum(Role)24880,t_bool)": {
+            "t_mapping(t_enum(Role)24938,t_bool)": {
               "label": "mapping(enum IPermissionsManager.Role => bool)",
               "numberOfBytes": "32"
             },
@@ -5324,13 +4838,13 @@
               "label": "token",
               "offset": 0,
               "slot": "0",
-              "type": "t_contract(SuperChampsToken)21218",
+              "type": "t_contract(SuperChampsToken)21276",
               "contract": "SCDeploymentHelper",
               "src": "SuperChamps/contracts/Utils/SCDeploymentHelper.sol:20"
             }
           ],
           "types": {
-            "t_contract(SuperChampsToken)21218": {
+            "t_contract(SuperChampsToken)21276": {
               "label": "contract SuperChampsToken",
               "numberOfBytes": "20"
             }

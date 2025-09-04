@@ -1,8 +1,8 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/Ecosystem/SCVirtualAssetEvents.sol": {
-      "lastModificationDate": 1754124502010,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/Ecosystem/SCVirtualAssetEvents.sol": {
+      "lastModificationDate": 1752315968559,
       "contentHash": "949200c13b7df7bd7d19dc0ef6ad99a7",
       "sourceName": "SuperChamps/contracts/Ecosystem/SCVirtualAssetEvents.sol",
       "solcConfig": {
@@ -45,8 +45,8 @@
         "SCVirtualAssetEventsFactory"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/Utils/SCPermissionedAccess.sol": {
-      "lastModificationDate": 1754124502017,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/Utils/SCPermissionedAccess.sol": {
+      "lastModificationDate": 1752315968578,
       "contentHash": "daadf86ed02c6d22b9fd8b2096039c59",
       "sourceName": "SuperChamps/contracts/Utils/SCPermissionedAccess.sol",
       "solcConfig": {
@@ -87,8 +87,8 @@
         "SCPermissionedAccess"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/interfaces/IPermissionsManager.sol": {
-      "lastModificationDate": 1754124502023,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/interfaces/IPermissionsManager.sol": {
+      "lastModificationDate": 1714538806856,
       "contentHash": "224c73ca9f350d8f7c8f232c250940ff",
       "sourceName": "SuperChamps/interfaces/IPermissionsManager.sol",
       "solcConfig": {
@@ -127,8 +127,8 @@
         "IPermissionsManager"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/interfaces/ISuperChampsToken.sol": {
-      "lastModificationDate": 1754124502023,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/interfaces/ISuperChampsToken.sol": {
+      "lastModificationDate": 1752315968578,
       "contentHash": "b36083b73cd0312c80bd2d91ed36fd17",
       "sourceName": "SuperChamps/interfaces/ISuperChampsToken.sol",
       "solcConfig": {
@@ -169,8 +169,8 @@
         "ISuperChampsToken"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/NFTs/SCTempLockedNFT.sol": {
-      "lastModificationDate": 1754124502019,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/NFTs/SCTempLockedNFT.sol": {
+      "lastModificationDate": 1752315968560,
       "contentHash": "f8108383f6f114cd90607e9cc24c63bd",
       "sourceName": "SuperChamps/contracts/NFTs/SCTempLockedNFT.sol",
       "solcConfig": {
@@ -217,8 +217,8 @@
         "SCTempLockedNFT"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/interfaces/IERC721MetadataRenderer.sol": {
-      "lastModificationDate": 1754124502021,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/interfaces/IERC721MetadataRenderer.sol": {
+      "lastModificationDate": 1752315968578,
       "contentHash": "50b82b596e1793f4183218a047d6225b",
       "sourceName": "SuperChamps/interfaces/IERC721MetadataRenderer.sol",
       "solcConfig": {
@@ -257,8 +257,8 @@
         "IERC721MetadataRenderer"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/NFTs/SCGenericRenderer.sol": {
-      "lastModificationDate": 1754124502019,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/NFTs/SCGenericRenderer.sol": {
+      "lastModificationDate": 1752315968560,
       "contentHash": "02a0e4e66ae54527cfa52a2574b694fd",
       "sourceName": "SuperChamps/contracts/NFTs/SCGenericRenderer.sol",
       "solcConfig": {
@@ -301,8 +301,8 @@
         "SCGenericRenderer"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
-      "lastModificationDate": 1754124866165,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1752316740946,
       "contentHash": "8f19f64d2adadf448840908bbaf431c8",
       "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
       "solcConfig": {
@@ -341,8 +341,8 @@
         "IERC20"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol": {
-      "lastModificationDate": 1754124866008,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol": {
+      "lastModificationDate": 1752316740892,
       "contentHash": "a7951c81f7037d558c6d2f220b0cb38e",
       "sourceName": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
       "solcConfig": {
@@ -389,8 +389,8 @@
         "ERC721"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
-      "lastModificationDate": 1754124866227,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
+      "lastModificationDate": 1752316740972,
       "contentHash": "13dbc135f563c72a11b1cf4fbb5fb284",
       "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
       "solcConfig": {
@@ -433,48 +433,8 @@
         "Strings"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/math/SafeCast.sol": {
-      "lastModificationDate": 1754124866222,
-      "contentHash": "2adca1150f58fc6f3d1f0a0f22ee7cca",
-      "sourceName": "@openzeppelin/contracts/utils/math/SafeCast.sol",
-      "solcConfig": {
-        "version": "0.8.24",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "useLiteralContent": true
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "SafeCast"
-      ]
-    },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/math/SignedMath.sol": {
-      "lastModificationDate": 1754124866224,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/math/SignedMath.sol": {
+      "lastModificationDate": 1752316740970,
       "contentHash": "ae3528afb8bdb0a7dcfba5b115ee8074",
       "sourceName": "@openzeppelin/contracts/utils/math/SignedMath.sol",
       "solcConfig": {
@@ -515,8 +475,8 @@
         "SignedMath"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/math/Math.sol": {
-      "lastModificationDate": 1754124866200,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/math/Math.sol": {
+      "lastModificationDate": 1752316740959,
       "contentHash": "5ec781e33d3a9ac91ffdc83d94420412",
       "sourceName": "@openzeppelin/contracts/utils/math/Math.sol",
       "solcConfig": {
@@ -558,8 +518,48 @@
         "Math"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/Panic.sol": {
-      "lastModificationDate": 1754124866214,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/math/SafeCast.sol": {
+      "lastModificationDate": 1752316740969,
+      "contentHash": "2adca1150f58fc6f3d1f0a0f22ee7cca",
+      "sourceName": "@openzeppelin/contracts/utils/math/SafeCast.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SafeCast"
+      ]
+    },
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/Panic.sol": {
+      "lastModificationDate": 1752316740965,
       "contentHash": "2133dc13536b4a6a98131e431fac59e1",
       "sourceName": "@openzeppelin/contracts/utils/Panic.sol",
       "solcConfig": {
@@ -598,8 +598,8 @@
         "Panic"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
-      "lastModificationDate": 1754124866187,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+      "lastModificationDate": 1752316740953,
       "contentHash": "1fdc621cd6747e8985e11fc76ce74511",
       "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
       "solcConfig": {
@@ -640,8 +640,8 @@
         "IERC721"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/Context.sol": {
-      "lastModificationDate": 1754124865830,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1752316740838,
       "contentHash": "67bfbc07588eb8683b3fd8f6f909563e",
       "sourceName": "@openzeppelin/contracts/utils/Context.sol",
       "solcConfig": {
@@ -680,50 +680,8 @@
         "Context"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/interfaces/draft-IERC6093.sol": {
-      "lastModificationDate": 1754124865891,
-      "contentHash": "267d92fe4de67b1bdb3302c08f387dbf",
-      "sourceName": "@openzeppelin/contracts/interfaces/draft-IERC6093.sol",
-      "solcConfig": {
-        "version": "0.8.24",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "useLiteralContent": true
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "IERC1155Errors",
-        "IERC20Errors",
-        "IERC721Errors"
-      ]
-    },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
-      "lastModificationDate": 1754124865941,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
+      "lastModificationDate": 1752316740877,
       "contentHash": "7c03c1e37c3dc24eafb76dc2b8a5c3a6",
       "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
       "solcConfig": {
@@ -764,8 +722,50 @@
         "ERC165"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/token/ERC721/utils/ERC721Utils.sol": {
-      "lastModificationDate": 1754124866024,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/interfaces/draft-IERC6093.sol": {
+      "lastModificationDate": 1752316740856,
+      "contentHash": "267d92fe4de67b1bdb3302c08f387dbf",
+      "sourceName": "@openzeppelin/contracts/interfaces/draft-IERC6093.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC1155Errors",
+        "IERC20Errors",
+        "IERC721Errors"
+      ]
+    },
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/token/ERC721/utils/ERC721Utils.sol": {
+      "lastModificationDate": 1752316740913,
       "contentHash": "e12814872b31b0af06106796a6621b04",
       "sourceName": "@openzeppelin/contracts/token/ERC721/utils/ERC721Utils.sol",
       "solcConfig": {
@@ -807,8 +807,8 @@
         "ERC721Utils"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
-      "lastModificationDate": 1754124866190,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
+      "lastModificationDate": 1752316740954,
       "contentHash": "12c206f185cb951213799561fdcaa40d",
       "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
       "solcConfig": {
@@ -849,8 +849,8 @@
         "IERC721Metadata"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
-      "lastModificationDate": 1754124866161,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+      "lastModificationDate": 1752316740943,
       "contentHash": "bf0119eb2a570f219729ff38b6cd1df8",
       "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
       "solcConfig": {
@@ -889,8 +889,8 @@
         "IERC165"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
-      "lastModificationDate": 1754124866191,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
+      "lastModificationDate": 1752316740955,
       "contentHash": "729ce0904eb533489ffcc3bfe91237d4",
       "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
       "solcConfig": {
@@ -929,8 +929,8 @@
         "IERC721Receiver"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/Seasons/GenesisNFTStaking.sol": {
-      "lastModificationDate": 1754124502019,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/Seasons/GenesisNFTStaking.sol": {
+      "lastModificationDate": 1752315968560,
       "contentHash": "1b73b3b39390d1dc396aca2c46c5c452",
       "sourceName": "SuperChamps/contracts/Seasons/GenesisNFTStaking.sol",
       "solcConfig": {
@@ -975,8 +975,8 @@
         "GenesisNFTStaking"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/structs/EnumerableMap.sol": {
-      "lastModificationDate": 1754124865906,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/structs/EnumerableMap.sol": {
+      "lastModificationDate": 1752316740862,
       "contentHash": "4c2441a8f52afec07ad38e3df442920f",
       "sourceName": "@openzeppelin/contracts/utils/structs/EnumerableMap.sol",
       "solcConfig": {
@@ -1017,8 +1017,8 @@
         "EnumerableMap"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/structs/EnumerableSet.sol": {
-      "lastModificationDate": 1754124865909,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/structs/EnumerableSet.sol": {
+      "lastModificationDate": 1752316740863,
       "contentHash": "9dea2f1d2615534fb7e64833ae92b7c3",
       "sourceName": "@openzeppelin/contracts/utils/structs/EnumerableSet.sol",
       "solcConfig": {
@@ -1059,8 +1059,8 @@
         "EnumerableSet"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/Arrays.sol": {
-      "lastModificationDate": 1754124865766,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/Arrays.sol": {
+      "lastModificationDate": 1752316740821,
       "contentHash": "87b3640dbda6477c44a91647d48ff29c",
       "sourceName": "@openzeppelin/contracts/utils/Arrays.sol",
       "solcConfig": {
@@ -1104,8 +1104,8 @@
         "Arrays"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/StorageSlot.sol": {
-      "lastModificationDate": 1754124866226,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/StorageSlot.sol": {
+      "lastModificationDate": 1752316740971,
       "contentHash": "e656d64c4ce918f3d13030b91c935134",
       "sourceName": "@openzeppelin/contracts/utils/StorageSlot.sol",
       "solcConfig": {
@@ -1144,48 +1144,8 @@
         "StorageSlot"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/SlotDerivation.sol": {
-      "lastModificationDate": 1754124866225,
-      "contentHash": "43950136ee6a1761d2cbed39d16bb1e0",
-      "sourceName": "@openzeppelin/contracts/utils/SlotDerivation.sol",
-      "solcConfig": {
-        "version": "0.8.24",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "useLiteralContent": true
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "SlotDerivation"
-      ]
-    },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/Comparators.sol": {
-      "lastModificationDate": 1754124865827,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/Comparators.sol": {
+      "lastModificationDate": 1752316740838,
       "contentHash": "0e57405a6f979853cbfeb0df3546c3a3",
       "sourceName": "@openzeppelin/contracts/utils/Comparators.sol",
       "solcConfig": {
@@ -1224,8 +1184,48 @@
         "Comparators"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol": {
-      "lastModificationDate": 1754124866204,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/SlotDerivation.sol": {
+      "lastModificationDate": 1752316740970,
+      "contentHash": "43950136ee6a1761d2cbed39d16bb1e0",
+      "sourceName": "@openzeppelin/contracts/utils/SlotDerivation.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SlotDerivation"
+      ]
+    },
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol": {
+      "lastModificationDate": 1752316740961,
       "contentHash": "260f3968eefa3bbd30520cff5384cd93",
       "sourceName": "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol",
       "solcConfig": {
@@ -1266,8 +1266,8 @@
         "MessageHashUtils"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/cryptography/EIP712.sol": {
-      "lastModificationDate": 1754124865901,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/cryptography/EIP712.sol": {
+      "lastModificationDate": 1752316740860,
       "contentHash": "b21731956bbef780b4cc856e8dda7426",
       "sourceName": "@openzeppelin/contracts/utils/cryptography/EIP712.sol",
       "solcConfig": {
@@ -1310,8 +1310,48 @@
         "EIP712"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/ShortStrings.sol": {
-      "lastModificationDate": 1754124866223,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/interfaces/IERC5267.sol": {
+      "lastModificationDate": 1752316740951,
+      "contentHash": "94364524cb1a39dcbc3d3afff6d8e53e",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC5267.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": true
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC5267"
+      ]
+    },
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/ShortStrings.sol": {
+      "lastModificationDate": 1752316740969,
       "contentHash": "c1be9487e5a64acf23b5d8028482e748",
       "sourceName": "@openzeppelin/contracts/utils/ShortStrings.sol",
       "solcConfig": {
@@ -1352,48 +1392,8 @@
         "ShortStrings"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/interfaces/IERC5267.sol": {
-      "lastModificationDate": 1754124866179,
-      "contentHash": "94364524cb1a39dcbc3d3afff6d8e53e",
-      "sourceName": "@openzeppelin/contracts/interfaces/IERC5267.sol",
-      "solcConfig": {
-        "version": "0.8.24",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "useLiteralContent": true
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "IERC5267"
-      ]
-    },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol": {
-      "lastModificationDate": 1754124865985,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol": {
+      "lastModificationDate": 1752316740884,
       "contentHash": "b1a8fc63b83ce00408e0c9ed1230b717",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol",
       "solcConfig": {
@@ -1438,8 +1438,8 @@
         "ERC20Permit"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
-      "lastModificationDate": 1754124865980,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+      "lastModificationDate": 1752316740882,
       "contentHash": "57d79df281f57bbb1b09214c7914f877",
       "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
       "solcConfig": {
@@ -1483,8 +1483,8 @@
         "ERC20"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol": {
-      "lastModificationDate": 1754124865899,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol": {
+      "lastModificationDate": 1752316740859,
       "contentHash": "81de029d56aa803972be03c5d277cb6c",
       "sourceName": "@openzeppelin/contracts/utils/cryptography/ECDSA.sol",
       "solcConfig": {
@@ -1523,8 +1523,8 @@
         "ECDSA"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/Nonces.sol": {
-      "lastModificationDate": 1754124866206,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/Nonces.sol": {
+      "lastModificationDate": 1752316740961,
       "contentHash": "c32d108058718efb9061b88e83a83f79",
       "sourceName": "@openzeppelin/contracts/utils/Nonces.sol",
       "solcConfig": {
@@ -1563,8 +1563,8 @@
         "Nonces"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Permit.sol": {
-      "lastModificationDate": 1754124866167,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Permit.sol": {
+      "lastModificationDate": 1752316740947,
       "contentHash": "94ec15baf0d5df863f45b8f351937ec7",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Permit.sol",
       "solcConfig": {
@@ -1603,8 +1603,8 @@
         "IERC20Permit"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
-      "lastModificationDate": 1754124866166,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+      "lastModificationDate": 1752316740946,
       "contentHash": "794db3115001aa372c79326fcfd44b1f",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
       "solcConfig": {
@@ -1645,8 +1645,8 @@
         "IERC20Metadata"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/Token/SCRewardsDispenser.sol": {
-      "lastModificationDate": 1754124502007,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/Token/SCRewardsDispenser.sol": {
+      "lastModificationDate": 1752315968561,
       "contentHash": "3aecf521fc66f2aa1dab33f55d092bab",
       "sourceName": "SuperChamps/contracts/Token/SCRewardsDispenser.sol",
       "solcConfig": {
@@ -1692,8 +1692,8 @@
         "SCRewardsDispenser"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/interfaces/ISCSeasonRewards.sol": {
-      "lastModificationDate": 1754124502023,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/interfaces/ISCSeasonRewards.sol": {
+      "lastModificationDate": 1752315968578,
       "contentHash": "060a8ab22f3e1a713d118bb4df4cc0b6",
       "sourceName": "SuperChamps/interfaces/ISCSeasonRewards.sol",
       "solcConfig": {
@@ -1732,8 +1732,8 @@
         "ISCSeasonRewards"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol": {
-      "lastModificationDate": 1754124865981,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol": {
+      "lastModificationDate": 1752316740883,
       "contentHash": "273d8d24b06f67207dd5f35c3a0c1086",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol",
       "solcConfig": {
@@ -1775,8 +1775,8 @@
         "ERC20Burnable"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
-      "lastModificationDate": 1754124866207,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1752316740962,
       "contentHash": "d3c790edc9ccf808a17c5a6cd13614fd",
       "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
       "solcConfig": {
@@ -1817,9 +1817,9 @@
         "Ownable"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/Token/KiguEmission.sol": {
-      "lastModificationDate": 1754125429749,
-      "contentHash": "d1135690358532fda8859343dfd94a72",
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/Token/KiguEmission.sol": {
+      "lastModificationDate": 1756965480479,
+      "contentHash": "c679761ebea8ecc9630f3e741f071b4c",
       "sourceName": "SuperChamps/contracts/Token/KiguEmission.sol",
       "solcConfig": {
         "version": "0.8.24",
@@ -1861,8 +1861,8 @@
         "KiguEmission"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/interfaces/IKiguMinter.sol": {
-      "lastModificationDate": 1754125100995,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/interfaces/IKiguMinter.sol": {
+      "lastModificationDate": 1756965480480,
       "contentHash": "20480e43d55eb16d5af13deece9f1437",
       "sourceName": "SuperChamps/interfaces/IKiguMinter.sol",
       "solcConfig": {
@@ -1901,8 +1901,8 @@
         "IKiguMinter"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/Token/KiguToken.sol": {
-      "lastModificationDate": 1754124994762,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/Token/KiguToken.sol": {
+      "lastModificationDate": 1756965480480,
       "contentHash": "eb40044c444ee6c8d0bcd1f0084c0bda",
       "sourceName": "SuperChamps/contracts/Token/KiguToken.sol",
       "solcConfig": {
@@ -1945,8 +1945,8 @@
         "KiguToken"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/interfaces/IKigu.sol": {
-      "lastModificationDate": 1754125093886,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/interfaces/IKigu.sol": {
+      "lastModificationDate": 1756965480480,
       "contentHash": "9003e2ae3614e4d9adfabaf379851b7e",
       "sourceName": "SuperChamps/interfaces/IKigu.sol",
       "solcConfig": {
@@ -1985,8 +1985,8 @@
         "IKigu"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/Token/KiguMinter.sol": {
-      "lastModificationDate": 1754124990474,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/Token/KiguMinter.sol": {
+      "lastModificationDate": 1756965480480,
       "contentHash": "7e60a5f7ee18192ebb9af34892c36f6e",
       "sourceName": "SuperChamps/contracts/Token/KiguMinter.sol",
       "solcConfig": {
@@ -2027,8 +2027,8 @@
         "KiguMinter"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/Synthetix/contracts/StakingRewards.sol": {
-      "lastModificationDate": 1754124502025,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/Synthetix/contracts/StakingRewards.sol": {
+      "lastModificationDate": 1752315968578,
       "contentHash": "fca2d53bd076c3920b8689c607cc775f",
       "sourceName": "Synthetix/contracts/StakingRewards.sol",
       "solcConfig": {
@@ -2073,8 +2073,8 @@
         "StakingRewards"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/Synthetix/contracts/RewardsDistributionRecipient.sol": {
-      "lastModificationDate": 1754124502026,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/Synthetix/contracts/RewardsDistributionRecipient.sol": {
+      "lastModificationDate": 1714538806857,
       "contentHash": "08c4d55acff9f8ac247d0074d70700e3",
       "sourceName": "Synthetix/contracts/RewardsDistributionRecipient.sol",
       "solcConfig": {
@@ -2115,8 +2115,8 @@
         "RewardsDistributionRecipient"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/Synthetix/contracts/Pausable.sol": {
-      "lastModificationDate": 1754124502025,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/Synthetix/contracts/Pausable.sol": {
+      "lastModificationDate": 1714538806856,
       "contentHash": "6fed4f05a1667be81d9fd841e423cb9c",
       "sourceName": "Synthetix/contracts/Pausable.sol",
       "solcConfig": {
@@ -2157,8 +2157,8 @@
         "Pausable"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/Synthetix/contracts/interfaces/IStakingRewards.sol": {
-      "lastModificationDate": 1754124502026,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/Synthetix/contracts/interfaces/IStakingRewards.sol": {
+      "lastModificationDate": 1714538806857,
       "contentHash": "eba42f565e1313efc30440cd1b506e9a",
       "sourceName": "Synthetix/contracts/interfaces/IStakingRewards.sol",
       "solcConfig": {
@@ -2199,8 +2199,8 @@
         "IStakingRewards"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/ReentrancyGuard.sol": {
-      "lastModificationDate": 1754124866218,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts/utils/ReentrancyGuard.sol": {
+      "lastModificationDate": 1752316740967,
       "contentHash": "190613e556d509d9e9a0ea43dc5d891d",
       "sourceName": "@openzeppelin/contracts/utils/ReentrancyGuard.sol",
       "solcConfig": {
@@ -2239,8 +2239,8 @@
         "ReentrancyGuard"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/Synthetix/contracts/Owned.sol": {
-      "lastModificationDate": 1754124502025,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/Synthetix/contracts/Owned.sol": {
+      "lastModificationDate": 1714538806856,
       "contentHash": "fb5dcb1539bd307980dfc6c5ad41383e",
       "sourceName": "Synthetix/contracts/Owned.sol",
       "solcConfig": {
@@ -2279,8 +2279,8 @@
         "Owned"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/Metagame/SCMetagameLocationRewards.sol": {
-      "lastModificationDate": 1754124502012,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/Metagame/SCMetagameLocationRewards.sol": {
+      "lastModificationDate": 1752315968559,
       "contentHash": "ab51841a2a9be0a68a833ccc452f1651",
       "sourceName": "SuperChamps/contracts/Metagame/SCMetagameLocationRewards.sol",
       "solcConfig": {
@@ -2324,8 +2324,8 @@
         "SCMetagameLocationRewards"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/interfaces/ISCMetagameDataSource.sol": {
-      "lastModificationDate": 1754124502021,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/interfaces/ISCMetagameDataSource.sol": {
+      "lastModificationDate": 1752315968578,
       "contentHash": "acf31ee2972201c7b8fc2db6905e0074",
       "sourceName": "SuperChamps/interfaces/ISCMetagameDataSource.sol",
       "solcConfig": {
@@ -2364,8 +2364,8 @@
         "ISCMetagameDataSource"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/interfaces/ISCAccessPass.sol": {
-      "lastModificationDate": 1754124502022,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/interfaces/ISCAccessPass.sol": {
+      "lastModificationDate": 1752315968578,
       "contentHash": "3cd184babb3fe3b99d1c8012a4eb9976",
       "sourceName": "SuperChamps/interfaces/ISCAccessPass.sol",
       "solcConfig": {
@@ -2404,8 +2404,8 @@
         "ISCAccessPass"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/Metagame/SCMetagameLocations.sol": {
-      "lastModificationDate": 1754124502014,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/Metagame/SCMetagameLocations.sol": {
+      "lastModificationDate": 1752315968559,
       "contentHash": "a05fc70ac88a7d5424c4a5b7f394a6b2",
       "sourceName": "SuperChamps/contracts/Metagame/SCMetagameLocations.sol",
       "solcConfig": {
@@ -2452,8 +2452,8 @@
         "SCMetagameLocations"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/interfaces/ISCMetagameRegistry.sol": {
-      "lastModificationDate": 1754124502022,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/interfaces/ISCMetagameRegistry.sol": {
+      "lastModificationDate": 1714538806856,
       "contentHash": "54f0cb6aad9acbeeaddcd54be27f6cd5",
       "sourceName": "SuperChamps/interfaces/ISCMetagameRegistry.sol",
       "solcConfig": {
@@ -2492,9 +2492,9 @@
         "ISCMetagameRegistry"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/Seasons/SCSeasonRewards.sol": {
-      "lastModificationDate": 1754124502018,
-      "contentHash": "dc02dc1343430d35f4e7c7c86c723668",
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/Seasons/SCSeasonRewards.sol": {
+      "lastModificationDate": 1756965480479,
+      "contentHash": "a3267a9dbbb5e3b891dd5879bde9abae",
       "sourceName": "SuperChamps/contracts/Seasons/SCSeasonRewards.sol",
       "solcConfig": {
         "version": "0.8.24",
@@ -2539,8 +2539,8 @@
         "SCSeasonRewards"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/interfaces/ISCMetagamePool.sol": {
-      "lastModificationDate": 1754124502023,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/interfaces/ISCMetagamePool.sol": {
+      "lastModificationDate": 1752315968578,
       "contentHash": "af18151df2a8bc2b7bc2543ff2dacb93",
       "sourceName": "SuperChamps/interfaces/ISCMetagamePool.sol",
       "solcConfig": {
@@ -2581,8 +2581,8 @@
         "ISCMetagamePool"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/Metagame/SCMetagamePool.sol": {
-      "lastModificationDate": 1754124502013,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/Metagame/SCMetagamePool.sol": {
+      "lastModificationDate": 1752315968559,
       "contentHash": "48e545520e6bcffce915b7c8de412684",
       "sourceName": "SuperChamps/contracts/Metagame/SCMetagamePool.sol",
       "solcConfig": {
@@ -2626,8 +2626,8 @@
         "SCMetagamePool"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/NFTs/SCAccessPassRenderer.sol": {
-      "lastModificationDate": 1754124502020,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/NFTs/SCAccessPassRenderer.sol": {
+      "lastModificationDate": 1752315968560,
       "contentHash": "6e3fa69fe0fe31961801d39bfe56b25f",
       "sourceName": "SuperChamps/contracts/NFTs/SCAccessPassRenderer.sol",
       "solcConfig": {
@@ -2671,8 +2671,8 @@
         "SCAccessPassRenderer"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/NFTs/SCAccessPass.sol": {
-      "lastModificationDate": 1754124502020,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/NFTs/SCAccessPass.sol": {
+      "lastModificationDate": 1752315968560,
       "contentHash": "48f51d51f54ffa3179177160f6e0083a",
       "sourceName": "SuperChamps/contracts/NFTs/SCAccessPass.sol",
       "solcConfig": {
@@ -2717,8 +2717,8 @@
         "SCAccessPass"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/Metagame/SCMetagameGenericDataView.sol": {
-      "lastModificationDate": 1754124502014,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/Metagame/SCMetagameGenericDataView.sol": {
+      "lastModificationDate": 1752315968559,
       "contentHash": "092ffa62bfea3b1762571bafccfa10b5",
       "sourceName": "SuperChamps/contracts/Metagame/SCMetagameGenericDataView.sol",
       "solcConfig": {
@@ -2764,8 +2764,8 @@
         "SCMetagameGenericDataView"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/Metagame/SCMetagameRegistry.sol": {
-      "lastModificationDate": 1754124502013,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/Metagame/SCMetagameRegistry.sol": {
+      "lastModificationDate": 1752315968560,
       "contentHash": "c4dd7eadc0f43ef05ac52f6ae637fa1c",
       "sourceName": "SuperChamps/contracts/Metagame/SCMetagameRegistry.sol",
       "solcConfig": {
@@ -2809,8 +2809,8 @@
         "SCMetagameRegistry"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/interfaces/IVestingEscrow.sol": {
-      "lastModificationDate": 1754124502022,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/interfaces/IVestingEscrow.sol": {
+      "lastModificationDate": 1714538806856,
       "contentHash": "d237b2af179e95c6889450c1682be9d5",
       "sourceName": "SuperChamps/interfaces/IVestingEscrow.sol",
       "solcConfig": {
@@ -2852,8 +2852,8 @@
         "IVestingEscrow"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/Token/ExponentialVestingEscrow.sol": {
-      "lastModificationDate": 1754124502002,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/Token/ExponentialVestingEscrow.sol": {
+      "lastModificationDate": 1752315968560,
       "contentHash": "722a39b16ed8b1017f6d5108b37d186f",
       "sourceName": "SuperChamps/contracts/Token/ExponentialVestingEscrow.sol",
       "solcConfig": {
@@ -2898,8 +2898,8 @@
         "ExponentialVestingEscrow"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/Utils/ABDKMath64x64.sol": {
-      "lastModificationDate": 1754124502016,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/Utils/ABDKMath64x64.sol": {
+      "lastModificationDate": 1714538806855,
       "contentHash": "aa8dc5e267c357ab3e5e67bcc3422fae",
       "sourceName": "SuperChamps/contracts/Utils/ABDKMath64x64.sol",
       "solcConfig": {
@@ -2938,8 +2938,8 @@
         "ABDKMath64x64"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/Utils/SCDeploymentHelper.sol": {
-      "lastModificationDate": 1754124502017,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/Utils/SCDeploymentHelper.sol": {
+      "lastModificationDate": 1752315968577,
       "contentHash": "e85da4cacad396a6382c4e9f42e217a8",
       "sourceName": "SuperChamps/contracts/Utils/SCDeploymentHelper.sol",
       "solcConfig": {
@@ -2983,8 +2983,8 @@
         "SCDeploymentHelper"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/Token/SuperChampsToken.sol": {
-      "lastModificationDate": 1754124502002,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/Token/SuperChampsToken.sol": {
+      "lastModificationDate": 1752315968561,
       "contentHash": "09afe7c1ef00c5ae48b2b361d619e240",
       "sourceName": "SuperChamps/contracts/Token/SuperChampsToken.sol",
       "solcConfig": {
@@ -3027,8 +3027,8 @@
         "SuperChampsToken"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/Utils/PermissionsManager.sol": {
-      "lastModificationDate": 1754124502014,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/Utils/PermissionsManager.sol": {
+      "lastModificationDate": 1714538806855,
       "contentHash": "b8da4cf7be1d93235594f62b97ff8389",
       "sourceName": "SuperChamps/contracts/Utils/PermissionsManager.sol",
       "solcConfig": {
@@ -3070,8 +3070,8 @@
         "PermissionsManager"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/interfaces/ISCMLRewards.sol": {
-      "lastModificationDate": 1754124502022,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/interfaces/ISCMLRewards.sol": {
+      "lastModificationDate": 1752315968578,
       "contentHash": "ba3b32be117f4f840d77e1a54a28839c",
       "sourceName": "SuperChamps/interfaces/ISCMLRewards.sol",
       "solcConfig": {
@@ -3112,8 +3112,8 @@
         "ISCMLRewards"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/Seasons/SCMLRewards.sol": {
-      "lastModificationDate": 1754124502018,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/Seasons/SCMLRewards.sol": {
+      "lastModificationDate": 1752315968560,
       "contentHash": "0afc40c3e45eafe55d28e002109c1951",
       "sourceName": "SuperChamps/contracts/Seasons/SCMLRewards.sol",
       "solcConfig": {
@@ -3157,8 +3157,8 @@
         "SCMLRewards"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/Token/SCShop.sol": {
-      "lastModificationDate": 1754124502001,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/Token/SCShop.sol": {
+      "lastModificationDate": 1752315968561,
       "contentHash": "bda9cb30437d02f982e9b4284895a0e6",
       "sourceName": "SuperChamps/contracts/Token/SCShop.sol",
       "solcConfig": {
@@ -3202,8 +3202,8 @@
         "SCShop"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/Metagame/SCLock.sol": {
-      "lastModificationDate": 1754124502013,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/Metagame/SCLock.sol": {
+      "lastModificationDate": 1756965480479,
       "contentHash": "07307e3d441c12a861829e4f614350e1",
       "sourceName": "SuperChamps/contracts/Metagame/SCLock.sol",
       "solcConfig": {
@@ -3247,8 +3247,8 @@
         "SCLock"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol": {
-      "lastModificationDate": 1754124865756,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol": {
+      "lastModificationDate": 1752316740818,
       "contentHash": "77d30f3cd93f46b80b6f8f1ebc574ee4",
       "sourceName": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
       "solcConfig": {
@@ -3290,8 +3290,8 @@
         "OwnableUpgradeable"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
-      "lastModificationDate": 1754124865743,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
+      "lastModificationDate": 1752316740815,
       "contentHash": "2acae54ad209714bca07edf4bae32f72",
       "sourceName": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
       "solcConfig": {
@@ -3330,8 +3330,8 @@
         "Initializable"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": {
-      "lastModificationDate": 1754124865264,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/node_modules/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": {
+      "lastModificationDate": 1752316740651,
       "contentHash": "c28aaa25d083a9a55bd9ec9e0b785122",
       "sourceName": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
       "solcConfig": {
@@ -3372,8 +3372,8 @@
         "ContextUpgradeable"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/Utils/DeployGnosisProxies.sol": {
-      "lastModificationDate": 1754124502014,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/Utils/DeployGnosisProxies.sol": {
+      "lastModificationDate": 1752315968577,
       "contentHash": "09bc88565ac14d27bdebbbc7e730f1ed",
       "sourceName": "SuperChamps/contracts/Utils/DeployGnosisProxies.sol",
       "solcConfig": {
@@ -3414,8 +3414,8 @@
         "DeployGnosisProxies"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/Gnosis/interfaces/IGnosisSafeProxyFactory.sol": {
-      "lastModificationDate": 1754124502042,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/Gnosis/interfaces/IGnosisSafeProxyFactory.sol": {
+      "lastModificationDate": 1752315968558,
       "contentHash": "ef0cb17aad1c465d6ac3135a2a46e0f7",
       "sourceName": "Gnosis/interfaces/IGnosisSafeProxyFactory.sol",
       "solcConfig": {
@@ -3454,8 +3454,8 @@
         "IGnosisSafeProxyFactory"
       ]
     },
-    "/Users/sriharsha/Desktop/workspace/superchamps/Super-Champs-Token/SuperChamps/contracts/Utils/DeploymentProxy.sol": {
-      "lastModificationDate": 1754124502017,
+    "/Users/kunal/OfficeWork/Code/superchamps/Super-Champs-Token/SuperChamps/contracts/Utils/DeploymentProxy.sol": {
+      "lastModificationDate": 1752315968577,
       "contentHash": "d6e9d66dbfa6e302339ebc4f57b1dd6e",
       "sourceName": "SuperChamps/contracts/Utils/DeploymentProxy.sol",
       "solcConfig": {
